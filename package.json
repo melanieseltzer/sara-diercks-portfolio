@@ -19,7 +19,8 @@
     "react-dom": "^16.6.3",
     "react-markdown": "^4.0.3",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "^2.1.1",
+    "styled-components": "^4.1.1"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "^3.0.0"
