@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "eslint 'pages/**/*.js' 'src/**/*.js'",
     "prettier": "prettier --write",
-    "flow": "flow"
+    "flow": "flow",
+    "deploy": "now --public && now alias && now rm $npm_package_now_name --safe --yes"
   },
   "dependencies": {
     "next": "^7.0.2",
@@ -44,6 +45,12 @@
       "npm run prettier",
       "eslint --ignore-path .eslintignore",
       "git add"
+    ]
+  },
+  "now": {
+    "name": "sara-diercks-portfolio",
+    "alias": [
+      "sara-diercks-portfolio.now.sh"
     ]
   }
 }
