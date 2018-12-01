@@ -2,7 +2,7 @@
 
 > The GIS portfolio of Sara Diercks 🌎
 
-https://sara-diercks.netlify.com/
+https://sara-diercks-portfolio.now.sh/
 
 Showcasing projects from UCLA Extension's GIS and Geospatial Technology certificate program.
 
