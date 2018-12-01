@@ -13,6 +13,25 @@
     "flow": "flow",
     "deploy": "now --public && now alias && now rm $npm_package_now_name --safe --yes"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn flow"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run prettier",
+      "eslint --ignore-path .eslintignore",
+      "git add"
+    ]
+  },
+  "now": {
+    "name": "sara-diercks-portfolio",
+    "alias": [
+      "sara-diercks-portfolio.now.sh"
+    ]
+  },
   "dependencies": {
     "next": "^7.0.2",
     "react": "^16.6.3",
@@ -33,24 +52,5 @@
     "husky": "^1.2.0",
     "lint-staged": "^8.1.0",
     "prettier": "^1.15.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn flow"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "npm run prettier",
-      "eslint --ignore-path .eslintignore",
-      "git add"
-    ]
-  },
-  "now": {
-    "name": "sara-diercks-portfolio",
-    "alias": [
-      "sara-diercks-portfolio.now.sh"
-    ]
   }
 }
