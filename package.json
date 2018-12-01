@@ -4,6 +4,7 @@
   "author": "Melanie Seltzer <melleh11@gmail.com>",
   "description": "GIS portfolio for Sara Diercks",
   "repository": "https://github.com/melanieseltzer/sara-diercks-portfolio",
+  "license": "MIT",
   "scripts": {
     "dev": "next",
     "build": "next build",
