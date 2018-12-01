@@ -5,44 +5,52 @@
   "description": "GIS portfolio for Sara Diercks",
   "repository": "https://github.com/melanieseltzer/sara-diercks-portfolio",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint 'pages/**/*.js' 'src/**/*.js'",
+    "prettier": "prettier --write",
+    "flow": "flow",
+    "deploy": "now --public && now alias && now rm $npm_package_now_name --safe --yes"
   },
-  "dependencies": {
-    "apollo-boost": "^0.1.21",
-    "graphql": "^14.0.2",
-    "graphql-tag": "^2.10.0",
-    "react": "^16.6.3",
-    "react-apollo": "^2.3.1",
-    "react-dom": "^16.6.3",
-    "react-markdown": "^4.0.3",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.1",
-    "styled-components": "^4.1.1"
-  },
-  "devDependencies": {
-    "eslint-plugin-prettier": "^3.0.0"
-  },
-  "eslintConfig": {
-    "extends": "react-app",
-    "plugins": [
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true
-        }
-      ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn flow"
     }
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run prettier",
+      "eslint --ignore-path .eslintignore",
+      "git add"
+    ]
+  },
+  "now": {
+    "name": "sara-diercks-portfolio",
+    "alias": [
+      "sara-diercks-portfolio.now.sh"
+    ]
+  },
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "flow-bin": "^0.87.0",
+    "flow-typed": "^2.5.1",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
+  }
 }
