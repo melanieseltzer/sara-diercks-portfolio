@@ -21,9 +21,11 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": ["error"],
+    "prettier/prettier": [
+      "error"
+    ],
     "no-unused-vars": [
-      "warn",
+      "error",
       {
         "argsIgnorePattern": "res|next|^err"
       }
