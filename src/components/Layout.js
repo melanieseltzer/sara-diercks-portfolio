@@ -1,6 +1,7 @@
 // @flow
-import React, { type Node } from 'react';
+import React, { type Node, Fragment } from 'react';
 import Head from 'next/head';
+// import styled from 'styled-components';
 import { siteName } from '../../next.config.js';
 
 type Props = {
@@ -14,7 +15,7 @@ export default ({
   title = 'Default title',
   description = 'Default description'
 }: Props) => (
-  <section>
+  <Fragment>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>
@@ -26,6 +27,6 @@ export default ({
         rel="stylesheet"
       />
     </Head>
-    {children}
-  </section>
+    <main>{children}</main>
+  </Fragment>
 );
