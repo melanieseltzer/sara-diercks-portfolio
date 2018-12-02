@@ -1,13 +1,13 @@
 // @flow
 import React from 'react';
-import Page from '../src/components/Page';
+import Layout from '../src/components/Layout';
 
 const pageName = 'Home';
 
 export default () => (
-  <Page title={pageName}>
+  <Layout title={pageName} description="Test">
     <h1>{pageName}</h1>
 
     <p>Content goes here</p>
-  </Page>
+  </Layout>
 );
