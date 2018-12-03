@@ -5,20 +5,20 @@ import { siteName } from '../../next.config.js';
 
 type Props = {
   children: Node,
-  metaTitle: string,
+  pageTitle: string,
   metaDescription: string
 };
 
 export default ({
   children,
-  metaTitle = 'Default title',
+  pageTitle = 'Default title',
   metaDescription = 'Default description'
 }: Props) => (
   <Fragment>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>
-        {metaTitle} | {siteName}
+        {pageTitle} | {siteName}
       </title>
       <meta name="description" content={metaDescription} />
       <link
