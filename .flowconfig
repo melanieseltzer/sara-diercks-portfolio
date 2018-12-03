@@ -1,9 +1,9 @@
-[ignore]
-.*/node_modules/*
-
 [include]
+
+[ignore]
 
 [libs]
 
 [options]
-module.system.node.resolve_dirname=node_modules
+
+[untyped]
