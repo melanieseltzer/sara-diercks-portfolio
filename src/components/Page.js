@@ -1,7 +1,7 @@
 // @flow
 import React, { type Node, Fragment } from 'react';
 import Head from 'next/head';
-import { siteName } from '../../next.config.js';
+import { siteName } from '../../next.config';
 
 type Props = {
   children: Node,

@@ -5,7 +5,11 @@ import styled from 'styled-components';
 export default () => (
   <Section>
     <H1>
-      Hi! 👋 I'm Sara. I'm a <Mark>GIS Specialist</Mark> living in Los Angeles,
+      Hi!{' '}
+      <span role="img" aria-label="Wave">
+        👋
+      </span>{' '}
+      My name is Sara. I'm a <Mark>GIS Specialist</Mark> living in Los Angeles,
       CA.
     </H1>
     <Byline>

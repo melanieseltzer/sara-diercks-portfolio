@@ -6,19 +6,13 @@ export default () => (
   <nav>
     <ul>
       <li>
-        <Link href="#about">
-          <a>About</a>
-        </Link>
+        <Link href="#about">About</Link>
       </li>
       <li>
-        <Link href="#work">
-          <a>Work</a>
-        </Link>
+        <Link href="#work">Work</Link>
       </li>
       <li>
-        <Link href="#contact">
-          <a>Contact</a>
-        </Link>
+        <Link href="#contact">Contact</Link>
       </li>
     </ul>
   </nav>
