@@ -25,19 +25,18 @@ const Section = styled.section`
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 90px);
   margin: 0;
-  @media (min-width: 961px) {
-    height: auto;
-    margin: 200px 0;
-  }
 `;
 
 const H1 = styled.h1`
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.5rem;
   margin: 0;
+  @media (min-width: 375px) {
+    font-size: 1.7rem;
+  }
 `;
 
 const Mark = styled.mark`

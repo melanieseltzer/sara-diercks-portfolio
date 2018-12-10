@@ -31,6 +31,12 @@ export default class MyApp extends App {
 }
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
   html,
   body {
     font-family: 'Roboto', sans-serif;
@@ -43,7 +49,6 @@ const GlobalStyle = createGlobalStyle`
     color: hsl(0, 0%, 15%);
     margin: 0 auto;
     max-width: 960px;
-    padding: 0 1rem;
     width: calc(100vw - 40px);
   }
   @media(min-width: 961px) {
