@@ -2,6 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { COLORS } from '../../constants';
+
 export default () => (
   <Logo>
     <a href="/">
@@ -32,8 +34,12 @@ const Logo = styled.h1`
 `;
 
 const Border = styled.span`
-  background: #ff5f6d;
-  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  background: ${COLORS.pink.light};
+  background: linear-gradient(
+    to right,
+    ${COLORS.pink.light},
+    ${COLORS.orange.light}
+  );
   bottom: 0;
   display: block;
   height: 11px;

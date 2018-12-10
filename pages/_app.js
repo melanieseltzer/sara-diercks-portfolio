@@ -5,6 +5,8 @@ import { createGlobalStyle } from 'styled-components';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 
+import { COLORS } from '../src/constants';
+
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
@@ -46,14 +48,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   #__next {
-    color: hsl(0, 0%, 15%);
+    color: ${COLORS.black};
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 900px;
     width: calc(100vw - 40px);
-  }
-  @media(min-width: 961px) {
-    #__next {
-      padding: 0;
+    @media(min-width: 961px) {
       width: 100vw;
     }
   }
