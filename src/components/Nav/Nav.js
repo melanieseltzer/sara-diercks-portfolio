@@ -33,14 +33,15 @@ export default () => (
 const Nav = styled.nav`
   ul {
     display: flex;
+    font-size: 1.2rem;
     justify-content: space-evenly;
     padding: 0;
   }
   ul li {
     list-style-type: none;
-    @media (min-width: 375px) {
-      margin-left: 1.5rem;
-      :first-child {
+    @media (min-width: 414px) {
+      margin-left: 1.2rem;
+      &:first-child {
         margin-left: 0;
       }
     }
@@ -50,7 +51,8 @@ const Nav = styled.nav`
 const StyledLink = styled.a`
   color: inherit;
   text-decoration: none;
-  :hover {
-    text-decoration: underline;
+  &:hover,
+  &:focus {
+    border-bottom: 3px solid tomato;
   }
 `;

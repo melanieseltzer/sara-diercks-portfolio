@@ -4,14 +4,10 @@ import styled from 'styled-components';
 
 export default () => (
   <Section>
-    <H1>
-      Hi!{' '}
-      <span role="img" aria-label="Wave">
-        👋
-      </span>{' '}
-      My name is Sara. I'm a <Mark>GIS Specialist</Mark> living in Los Angeles,
-      CA.
-    </H1>
+    <H3>
+      Hi! My name is Sara. I'm a <Mark>GIS Specialist</Mark> living in Los
+      Angeles, CA.
+    </H3>
     <Byline>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a
       cursus mauris, non iaculis urna. Donec condimentum lorem facilisis ligula
@@ -22,31 +18,39 @@ export default () => (
 
 const Section = styled.section`
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 90px);
-  margin: 0;
+  height: auto;
+  margin: 30px 0;
+  text-align: center;
+  @media (min-width: 375px) {
+    text-align: left;
+  }
+  @media (min-width: 960px) {
+    margin: 0;
+    height: calc(100vh - 82px);
+  }
 `;
 
-const H1 = styled.h1`
-  font-size: 1.5rem;
+const H3 = styled.h3`
+  font-size: 1.6rem;
+  line-height: 2.6rem;
   font-weight: 400;
-  line-height: 2.5rem;
   margin: 0;
-  @media (min-width: 375px) {
-    font-size: 1.7rem;
+  @media (min-width: 768px) {
+    font-size: 3rem;
+    line-height: 4rem;
   }
 `;
 
 const Mark = styled.mark`
-  background: #dcdcdc;
+  background: #ffc371;
   color: hsl(0, 0%, 15%);
 `;
 
-const Byline = styled.h2`
+const Byline = styled.p`
   color: #555;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.8rem;
 `;
