@@ -18,7 +18,7 @@ const Header = styled.header`
   height: auto;
   padding: 10px 0;
   text-align: center;
-  @media (min-width: 375px) {
+  @media (min-width: 414px) {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
