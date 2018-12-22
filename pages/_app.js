@@ -50,10 +50,6 @@ const GlobalStyle = createGlobalStyle`
   #__next {
     color: ${COLORS.black};
     margin: 0 auto;
-    max-width: 900px;
-    width: calc(100vw - 40px);
-    @media(min-width: 961px) {
-      width: 100vw;
-    }
+    width: 100vw;
   }
 `;

@@ -21,10 +21,11 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   height: auto;
-  margin: 30px 0;
+  margin: 50px 20px;
+  max-width: 900px;
   text-align: left;
   @media (min-width: 960px) {
-    margin: 0;
+    margin: 0 auto;
     height: calc(100vh - 82px);
   }
 `;
