@@ -2,13 +2,16 @@
 
 // Colors
 export const COLORS = {
-  pink: {
+  primary: {
     light: '#ff5f6d'
   },
-  orange: {
+  secondary: {
     light: '#ffc371'
   },
   white: '#FFF',
   black: '#262626',
   gray: '#555'
 };
+
+// Nav Items
+export const pages = ['About', 'Work', 'Contact'];
