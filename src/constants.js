@@ -12,3 +12,6 @@ export const COLORS = {
   black: '#262626',
   gray: '#555'
 };
+
+// Nav Items
+export const pages = ['About', 'Work', 'Contact'];

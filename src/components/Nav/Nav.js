@@ -3,7 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-const pages = ['About', 'Work', 'Contact'];
+// Pull in nav items for render
+import { pages } from '../../constants';
 
 // Render a single nav item in the UI
 // NOTE: The Next.js Link API forces you to add an <a> inside <Link>
@@ -11,7 +12,7 @@ const pages = ['About', 'Work', 'Contact'];
 // to throw an error due to the `noHref` rule. The rule has been disabled temporarily
 // until a solution is found (issue: https://github.com/zeit/next.js/issues/5533)
 const navItem = name => (
-  <li>
+  <li key={name}>
     <Link href={`#${name.toLowerCase()}`} passHref>
       <StyledLink>{name}</StyledLink>
     </Link>
