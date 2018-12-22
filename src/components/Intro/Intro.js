@@ -7,13 +7,11 @@ import { COLORS } from '../../constants';
 export default () => (
   <Section>
     <H2>
-      Hi! My name is Sara. I'm a <Mark>GIS Specialist</Mark> living in Los
-      Angeles, CA.
+      Hi! I'm Sara. I'm a <Mark>GIS Technician</Mark> living in Los Angeles, CA.
     </H2>
     <Byline>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a
-      cursus mauris, non iaculis urna. Donec condimentum lorem facilisis ligula
-      tempus consequat.
+      I just completed my certificate in GIS and Geospatial Technology through
+      UCLA Extension. This portfolio showcases my current skills and projects.
     </Byline>
   </Section>
 );
@@ -36,10 +34,6 @@ const H2 = styled.h2`
   line-height: 3rem;
   font-weight: 400;
   margin: 0;
-  @media (min-width: 768px) {
-    font-size: 2.7rem;
-    line-height: 3.9rem;
-  }
 `;
 
 const Mark = styled.mark`
