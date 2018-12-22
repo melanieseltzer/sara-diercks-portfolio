@@ -14,7 +14,7 @@ export default () => (
 );
 
 const Logo = styled.h1`
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 400;
   transition: all 0.2s ease-in-out;
   margin: 0;
@@ -42,7 +42,7 @@ const Border = styled.span`
   );
   bottom: 0;
   display: block;
-  height: 11px;
+  height: 7px;
   max-width: 170px;
   margin: 0 auto;
   position: absolute;

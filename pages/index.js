@@ -9,33 +9,37 @@ const pageName = 'Home';
 export default () => (
   <Page pageTitle={pageName} metaDescription="Test">
     <Intro />
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
-    <p>Scroll</p>
+
+    <section>
+      <h3>Projects</h3>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+      <p>Scroll</p>
+    </section>
   </Page>
 );

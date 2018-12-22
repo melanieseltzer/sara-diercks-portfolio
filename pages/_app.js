@@ -41,6 +41,7 @@ const GlobalStyle = createGlobalStyle`
   }
   html,
   body {
+    background: url('/static/pattern-blue.svg');
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     height: 100%;
@@ -48,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   #__next {
-    color: ${COLORS.black};
+    color: ${COLORS.white};
     margin: 0 auto;
     width: 100vw;
   }

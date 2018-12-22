@@ -16,6 +16,7 @@ export default () => (
 
 const Header = styled.header`
   background: ${COLORS.white};
+  color: ${COLORS.black};
   box-shadow: 0 1px 10px 0 hsla(0, 0%, 0%, 0.2);
   display: flex;
   flex-direction: column;

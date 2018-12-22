@@ -24,27 +24,48 @@ const Section = styled.section`
   margin: 50px 20px;
   max-width: 900px;
   text-align: left;
-  @media (min-width: 960px) {
-    margin: 0 auto;
+  @media (min-width: 768px) {
+    margin: 0 20px;
     height: calc(100vh - 82px);
+  }
+  @media (min-width: 1024px) {
+    margin: 0 auto;
   }
 `;
 
 const H2 = styled.h2`
-  font-size: 2rem;
-  line-height: 3rem;
+  color: inherit;
+  font-size: 1.1rem;
+  line-height: 2.1rem;
   font-weight: 400;
   margin: 0;
+  @media (min-width: 375px) {
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
 `;
 
 const Mark = styled.mark`
   background: ${COLORS.secondary.light};
-  color: inherit;
+  color: ${COLORS.black};
+  padding: 3px;
 `;
 
 const Byline = styled.p`
-  color: ${COLORS.gray};
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.8rem;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  font-weight: 300;
+  @media (min-width: 375px) {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
 `;
