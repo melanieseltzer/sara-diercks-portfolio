@@ -34,11 +34,11 @@ const Logo = styled.h1`
 `;
 
 const Border = styled.span`
-  background: ${COLORS.pink.light};
+  background: ${COLORS.primary.light};
   background: linear-gradient(
     to right,
-    ${COLORS.pink.light},
-    ${COLORS.orange.light}
+    ${COLORS.primary.light},
+    ${COLORS.secondary.light}
   );
   bottom: 0;
   display: block;

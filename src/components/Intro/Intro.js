@@ -43,7 +43,7 @@ const H2 = styled.h2`
 `;
 
 const Mark = styled.mark`
-  background: ${COLORS.orange.light};
+  background: ${COLORS.secondary.light};
   color: inherit;
 `;
 
