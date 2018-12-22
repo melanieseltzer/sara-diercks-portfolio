@@ -14,4 +14,4 @@ export const COLORS = {
 };
 
 // Nav Items
-export const pages = ['About', 'Work', 'Contact'];
+export const pages = ['Projects', 'Resume', 'About', 'Contact'];

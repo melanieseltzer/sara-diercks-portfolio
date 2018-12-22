@@ -13,8 +13,20 @@ import { pages } from '../../constants';
 // until a solution is found (issue: https://github.com/zeit/next.js/issues/5533)
 const navItem = name => (
   <li key={name}>
-    <Link href={`#${name.toLowerCase()}`} passHref>
-      <StyledLink>{name}</StyledLink>
+    <Link
+      href={
+        name === 'Resume'
+          ? `/static/Diercks_Sara_Resume102818.pdf`
+          : `#${name.toLowerCase()}`
+      }
+      passHref
+    >
+      {name === 'Resume' ? (
+        // Add a target blank if the link is the resume
+        <StyledLink target="_blank">{name}</StyledLink>
+      ) : (
+        <StyledLink>{name}</StyledLink>
+      )}
     </Link>
   </li>
 );
@@ -46,8 +58,7 @@ const Nav = styled.nav`
 const StyledLink = styled.a`
   color: inherit;
   text-decoration: none;
-  &:hover,
-  &:focus {
+  &:hover {
     border-bottom: 3px solid tomato;
   }
 `;
