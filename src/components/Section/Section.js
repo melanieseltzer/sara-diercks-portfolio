@@ -2,16 +2,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import SectionTitle from '../SectionTitle';
+
 import { COLORS, maxContainerWidth } from '../../constants';
 
-export default () => (
-  <Footer>
-    <Container>Footer goes here</Container>
-  </Footer>
+type Props = {
+  title: string,
+  children: Node
+};
+
+export default ({ title, children }: Props) => (
+  <Section id={title.toLowerCase()}>
+    <Container>
+      <SectionTitle title={title} />
+      {children}
+    </Container>
+  </Section>
 );
 
-const Footer = styled.footer`
-  background: ${COLORS.gray.dark};
+const Section = styled.section`
+  background: ${COLORS.gray.light};
   color: ${COLORS.black};
   height: auto;
   padding: 100px 0;

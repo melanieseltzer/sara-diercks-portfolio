@@ -26,6 +26,7 @@ const Header = styled.header`
   position: sticky;
   text-align: center;
   top: 0;
+  z-index: 10;
   @media (min-width: 414px) {
     align-items: center;
     flex-direction: row;
