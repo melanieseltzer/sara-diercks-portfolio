@@ -10,7 +10,10 @@ export const COLORS = {
   },
   white: '#FFF',
   black: '#262626',
-  gray: '#555'
+  gray: {
+    light: '#f0f3f7',
+    dark: '#d0d6dd'
+  }
 };
 
 // Nav Items
