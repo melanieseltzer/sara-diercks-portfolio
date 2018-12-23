@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 // Pull in nav items for render
-import { pages } from '../../constants';
+import { COLORS, pages } from '../../constants';
 
 // Render a single nav item in the UI
 // NOTE: The Next.js Link API forces you to add an <a> inside <Link>
@@ -59,6 +59,6 @@ const StyledLink = styled.a`
   color: inherit;
   text-decoration: none;
   &:hover {
-    border-bottom: 3px solid tomato;
+    border-bottom: 3px solid ${COLORS.primary.light};
   }
 `;
