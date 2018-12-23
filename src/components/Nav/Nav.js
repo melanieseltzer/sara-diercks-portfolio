@@ -40,14 +40,14 @@ export default () => (
 const Nav = styled.nav`
   ul {
     display: flex;
-    font-size: 1.2rem;
+    font-size: 1rem;
     justify-content: space-evenly;
     padding: 0;
   }
   ul li {
     list-style-type: none;
     @media (min-width: 414px) {
-      margin-left: 1.2rem;
+      margin-left: 1.5rem;
       &:first-child {
         margin-left: 0;
       }

@@ -22,7 +22,7 @@ export default ({
       </title>
       <meta name="description" content={metaDescription} />
       <link
-        href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400"
         rel="stylesheet"
       />
     </Head>

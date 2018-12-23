@@ -41,6 +41,7 @@ const GlobalStyle = createGlobalStyle`
   }
   html,
   body {
+    background: url('/static/pattern-blue.svg');
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     height: 100%;
@@ -48,12 +49,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   #__next {
-    color: ${COLORS.black};
+    color: ${COLORS.white};
     margin: 0 auto;
-    max-width: 900px;
-    width: calc(100vw - 40px);
-    @media(min-width: 961px) {
-      width: 100vw;
-    }
+    width: 100vw;
   }
 `;
