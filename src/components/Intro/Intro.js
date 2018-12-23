@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { COLORS } from '../../constants';
+import { COLORS, maxContainerWidth } from '../../constants';
 
 export default () => (
   <Section>
@@ -22,7 +22,7 @@ const Section = styled.section`
   justify-content: center;
   height: auto;
   margin: 50px 20px;
-  max-width: 900px;
+  max-width: ${maxContainerWidth};
   text-align: left;
   @media (min-width: 768px) {
     margin: 0 20px;

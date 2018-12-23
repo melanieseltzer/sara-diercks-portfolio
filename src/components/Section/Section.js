@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import SectionTitle from '../SectionTitle';
 
-import { COLORS } from '../../constants';
+import { COLORS, maxContainerWidth } from '../../constants';
 
 type Props = {
   title: string,
@@ -29,7 +29,7 @@ const Section = styled.section`
 `;
 
 const Container = styled.div`
-  max-width: 900px;
+  max-width: ${maxContainerWidth};
   margin: 0 20px;
   @media (min-width: 1024px) {
     margin: 0 auto;

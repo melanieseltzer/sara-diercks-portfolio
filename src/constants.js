@@ -12,9 +12,12 @@ export const COLORS = {
   black: '#262626',
   gray: {
     light: '#f0f3f7',
-    dark: '#d0d6dd'
+    dark: '#dce3ed'
   }
 };
 
 // Nav Items
 export const pages = ['Projects', 'Resume', 'About', 'Contact'];
+
+// Breakpoints and sizes
+export const maxContainerWidth = '900px';
