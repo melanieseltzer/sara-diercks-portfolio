@@ -26,7 +26,7 @@ const Section = styled.section`
   text-align: left;
   @media (min-width: 768px) {
     margin: 0 20px;
-    height: calc(100vh - 82px);
+    height: calc(100vh - 50px);
   }
   @media (min-width: 1024px) {
     margin: 0 auto;
