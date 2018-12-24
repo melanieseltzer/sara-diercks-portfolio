@@ -21,12 +21,10 @@ const navItem = name => (
       }
       passHref
     >
-      {name === 'Resume' ? (
-        // Add a target blank if the link is the resume
-        <StyledLink target="_blank">{name}</StyledLink>
-      ) : (
-        <StyledLink>{name}</StyledLink>
-      )}
+      {/* Add a target blank only if the link is the resume */}
+      <StyledLink target={name === 'Resume' ? '_blank' : undefined}>
+        {name}
+      </StyledLink>
     </Link>
   </li>
 );
