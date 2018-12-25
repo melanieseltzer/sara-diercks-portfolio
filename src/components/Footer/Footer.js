@@ -12,7 +12,7 @@ export default () => (
 
 const Footer = styled.footer`
   background: ${COLORS.gray.dark};
-  color: ${COLORS.black};
+  color: ${COLORS.black.light};
   height: auto;
   padding: 100px 0;
   text-align: left;

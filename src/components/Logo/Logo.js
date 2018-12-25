@@ -20,7 +20,7 @@ const Logo = styled.h1`
   margin: 0;
   position: relative;
   a {
-    color: inherit;
+    color: ${COLORS.black.dark};
     text-decoration: none;
   }
   @media (min-width: 414px) {
@@ -38,7 +38,7 @@ const Border = styled.span`
   background: linear-gradient(
     to right,
     ${COLORS.primary.light},
-    ${COLORS.secondary.light}
+    ${COLORS.secondary.dark}
   );
   bottom: 0;
   display: block;

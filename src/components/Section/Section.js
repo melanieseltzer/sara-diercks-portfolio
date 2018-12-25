@@ -22,9 +22,9 @@ export default ({ title, children }: Props) => (
 
 const Section = styled.section`
   background: ${COLORS.gray.light};
-  color: ${COLORS.black};
+  color: ${COLORS.black.light};
   height: auto;
-  padding: 100px 0;
+  padding: 60px 0;
   text-align: left;
 `;
 
