@@ -28,7 +28,12 @@ export default ({ project }: Props) => (
           <Image src={project.thumbnail.url} alt={project.title} />
         )}
         <ProjectDetails>
-          <H4>{project.title}</H4>
+          <H4>
+            {project.title}{' '}
+            {project.finalProject && (
+              <Final className="test">Final Project</Final>
+            )}
+          </H4>
           <Paragraph>{project.shortDescription}</Paragraph>
           <span>
             {project.externalLinkName
@@ -47,7 +52,7 @@ export default ({ project }: Props) => (
 const Project = styled.div`
   background: ${COLORS.white};
   border-radius: 7px;
-  box-shadow: 0 5px 30px 5px hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0 8px 40px 0 rgba(42, 49, 141, 0.25);
   height: auto;
   margin-bottom: 50px;
   width: 100%;
@@ -71,12 +76,21 @@ const Image = styled.img`
   width: 100%;
 `;
 
+const Final = styled.span`
+  background: ${COLORS.secondary.light};
+  border-radius: 14px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+  padding: 7px;
+`;
+
 const ProjectDetails = styled.div`
   padding: 20px;
 `;
 
 const H4 = styled.h4`
   font-weight: 400;
+  line-height: 1.8rem;
   margin-bottom: 0;
 `;
 
@@ -89,7 +103,7 @@ const Paragraph = styled.p`
 const Link = styled.a`
   color: inherit;
   text-decoration: none;
-  span {
+  span:not(.test) {
     color: ${COLORS.primary.light};
     &:hover {
       text-decoration: underline;
@@ -99,5 +113,5 @@ const Link = styled.a`
 
 const FontAwesomeIconStyle = styled(FontAwesomeIcon)`
   height: 1.05rem;
-  margin-left: 5px;
+  margin-left: 10px;
 `;

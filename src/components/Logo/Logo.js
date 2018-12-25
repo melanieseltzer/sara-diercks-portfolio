@@ -38,7 +38,7 @@ const Border = styled.span`
   background: linear-gradient(
     to right,
     ${COLORS.primary.light},
-    ${COLORS.secondary.light}
+    ${COLORS.secondary.dark}
   );
   bottom: 0;
   display: block;

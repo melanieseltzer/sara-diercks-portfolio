@@ -20,7 +20,7 @@ const H3 = styled.h3`
   padding-bottom: 15px;
   position: relative;
   &:after {
-    border-bottom: 5px solid ${COLORS.secondary.light};
+    border-bottom: 5px solid ${COLORS.secondary.dark};
     content: '';
     position: absolute;
     width: 50%;
