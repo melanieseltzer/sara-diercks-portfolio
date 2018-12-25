@@ -2,24 +2,41 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFilePdf,
+  faExternalLinkAlt
+} from '@fortawesome/free-solid-svg-icons';
 
 import { COLORS } from '../../constants';
 
-export default () => (
+type Props = {
+  project: Object
+};
+
+export default ({ project }: Props) => (
   <>
     <Project>
-      <Link href="/test/" target="_blank">
-        <Image src="https://source.unsplash.com/random" alt="Title" />
+      <Link
+        href={
+          // If there's a PDF then that will be the link, otherwise there'll be an external link
+          project.projectPdf ? project.projectPdf.url : project.externalLinkUrl
+        }
+        target="_blank"
+      >
+        {/* Project doesn't have to have a thumbnail */}
+        {project.thumbnail && (
+          <Image src={project.thumbnail.url} alt={project.title} />
+        )}
         <ProjectDetails>
-          <H4>Title</H4>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            fringilla, ex sed pharetra fringilla, dolor nisl ultrices felis,
-            mollis tristique leo purus in mauris.
-          </Paragraph>
+          <H4>{project.title}</H4>
+          <Paragraph>{project.shortDescription}</Paragraph>
           <span>
-            View PDF <FontAwesomeIconStyle icon={faExternalLinkAlt} />
+            {project.externalLinkName
+              ? project.externalLinkName
+              : 'View Project'}
+            <FontAwesomeIconStyle
+              icon={project.externalLinkName ? faExternalLinkAlt : faFilePdf}
+            />
           </span>
         </ProjectDetails>
       </Link>
@@ -81,5 +98,6 @@ const Link = styled.a`
 `;
 
 const FontAwesomeIconStyle = styled(FontAwesomeIcon)`
+  height: 1.05rem;
   margin-left: 5px;
 `;

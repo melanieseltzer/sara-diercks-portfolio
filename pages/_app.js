@@ -1,13 +1,16 @@
+// @flow
 import React from 'react';
+import { ApolloProvider } from 'react-apollo';
 import App, { Container } from 'next/app';
 import { createGlobalStyle } from 'styled-components';
 
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 
+import withApollo from '../backend/withApollo';
 import { COLORS } from '../src/constants';
 
-export default class MyApp extends App {
+class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
@@ -19,18 +22,22 @@ export default class MyApp extends App {
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, apollo } = this.props;
 
     return (
       <Container>
         <GlobalStyle />
         <Header />
-        <Component {...pageProps} />
+        <ApolloProvider client={apollo}>
+          <Component {...pageProps} />
+        </ApolloProvider>
         <Footer />
       </Container>
     );
   }
 }
+
+export default withApollo(MyApp);
 
 const GlobalStyle = createGlobalStyle`
   html {
