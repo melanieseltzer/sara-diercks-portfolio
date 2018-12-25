@@ -20,7 +20,7 @@ const Logo = styled.h1`
   margin: 0;
   position: relative;
   a {
-    color: inherit;
+    color: ${COLORS.black.dark};
     text-decoration: none;
   }
   @media (min-width: 414px) {

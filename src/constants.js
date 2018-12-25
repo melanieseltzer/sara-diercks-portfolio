@@ -11,7 +11,10 @@ export const COLORS = {
     dark: '#ffc371'
   },
   white: '#FFF',
-  black: '#4c4c4c',
+  black: {
+    light: '#4c4c4c',
+    dark: '#262626'
+  },
   gray: {
     light: '#f0f3f7',
     dark: '#dce3ed'
