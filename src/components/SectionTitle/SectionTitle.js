@@ -15,7 +15,7 @@ export default Title;
 const H3 = styled.h3`
   display: inline-block;
   color: inherit;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   padding-bottom: 15px;
   position: relative;

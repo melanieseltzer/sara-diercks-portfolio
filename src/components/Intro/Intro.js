@@ -55,7 +55,7 @@ const H2 = styled.h2`
 
 const Mark = styled.mark`
   background: ${COLORS.secondary.dark};
-  color: ${COLORS.black};
+  color: #262626;
   padding: 3px;
 `;
 
