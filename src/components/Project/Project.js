@@ -16,25 +16,25 @@ type Props = {
 export default ({ project }: Props) => (
   <>
     <Project>
-      <Link
-        href={
-          // If there's a PDF then that will be the link, otherwise there'll be an external link
-          project.projectPdf ? project.projectPdf.url : project.externalLinkUrl
-        }
-        target="_blank"
-      >
-        {/* Project doesn't have to have a thumbnail */}
-        {project.thumbnail && (
-          <Image src={project.thumbnail.url} alt={project.title} />
-        )}
-        <ProjectDetails>
-          <H4>
-            {project.title}{' '}
-            {project.finalProject && (
-              <Final className="test">Final Project</Final>
-            )}
-          </H4>
-          <Paragraph>{project.shortDescription}</Paragraph>
+      {/* Project doesn't have to have a thumbnail */}
+      {project.thumbnail && (
+        <Image src={project.thumbnail.url} alt={project.title} />
+      )}
+      <ProjectDetails>
+        <H4>
+          {project.title}{' '}
+          {project.finalProject && <Tag className="tag">Final Project</Tag>}
+        </H4>
+        <Paragraph>{project.shortDescription}</Paragraph>
+        <Link
+          href={
+            // If there's a PDF then that will be the link, otherwise there'll be an external link
+            project.projectPdf
+              ? project.projectPdf.url
+              : project.externalLinkUrl
+          }
+          target="_blank"
+        >
           <span>
             {project.externalLinkName
               ? project.externalLinkName
@@ -43,8 +43,8 @@ export default ({ project }: Props) => (
               icon={project.externalLinkName ? faExternalLinkAlt : faFilePdf}
             />
           </span>
-        </ProjectDetails>
-      </Link>
+        </Link>
+      </ProjectDetails>
     </Project>
   </>
 );
@@ -76,14 +76,6 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const Final = styled.span`
-  background: ${COLORS.secondary.light};
-  border-radius: 14px;
-  font-size: 0.8rem;
-  margin-left: 10px;
-  padding: 7px;
-`;
-
 const ProjectDetails = styled.div`
   padding: 20px;
 `;
@@ -92,6 +84,14 @@ const H4 = styled.h4`
   font-weight: 400;
   line-height: 1.8rem;
   margin-bottom: 0;
+`;
+
+const Tag = styled.span`
+  background: ${COLORS.secondary.light};
+  border-radius: 14px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+  padding: 7px;
 `;
 
 const Paragraph = styled.p`
@@ -103,7 +103,7 @@ const Paragraph = styled.p`
 const Link = styled.a`
   color: inherit;
   text-decoration: none;
-  span:not(.test) {
+  span:not(.tag) {
     color: ${COLORS.primary.light};
     &:hover {
       text-decoration: underline;
