@@ -12,7 +12,7 @@
     "lint": "eslint 'pages/**/*.js' 'src/**/*.js'",
     "prettier": "prettier --write",
     "flow": "flow",
-    "deploy": "now --public && now alias && now rm $npm_package_now_name --safe --yes"
+    "deploy": "now rm sara-diercks-portfolio --safe --yes ; now && now alias"
   },
   "husky": {
     "hooks": {
@@ -25,12 +25,6 @@
       "npm run prettier",
       "eslint --ignore-path .eslintignore",
       "git add"
-    ]
-  },
-  "now": {
-    "name": "sara-diercks-portfolio",
-    "alias": [
-      "sara-diercks-portfolio.now.sh"
     ]
   },
   "dependencies": {
