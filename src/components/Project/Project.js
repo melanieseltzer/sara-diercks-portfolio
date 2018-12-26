@@ -52,7 +52,7 @@ export default ({ project }: Props) => (
 const Project = styled.div`
   background: ${COLORS.white};
   border-radius: 7px;
-  box-shadow: 0 8px 40px 0 rgba(42, 49, 141, 0.25);
+  box-shadow: 0 8px 40px 0 rgba(51, 57, 132, 0.25);
   height: auto;
   margin-bottom: 50px;
   width: 100%;

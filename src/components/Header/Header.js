@@ -18,7 +18,7 @@ const Header = styled.header`
   align-items: center;
   background: ${COLORS.white};
   color: ${COLORS.black.light};
-  box-shadow: 0 1px 10px 0 rgba(42, 49, 141, 0.25);
+  box-shadow: 0 1px 10px 0 rgba(51, 57, 132, 0.25);
   display: flex;
   flex-direction: row;
   height: auto;
