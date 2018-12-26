@@ -23,7 +23,7 @@ const Logo = styled.h1`
     color: ${COLORS.black.dark};
     text-decoration: none;
   }
-  @media (min-width: 414px) {
+  @media (min-width: 1025px) {
     &:hover {
       transform: scale(1.05);
     }
@@ -48,12 +48,12 @@ const Border = styled.span`
   position: absolute;
   width: 100%;
   z-index: -10;
-  @media (max-width: 413px) {
+  @media (max-width: 1024px) {
     left: 50%;
     right: 50%;
     transform: translateX(-50%);
   }
-  @media (min-width: 414px) {
+  @media (min-width: 1025px) {
     margin: 0;
     max-width: none;
     transition: all 0.2s ease-in-out;

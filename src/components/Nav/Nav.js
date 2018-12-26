@@ -36,11 +36,16 @@ export default () => (
 );
 
 const Nav = styled.nav`
+  display: none;
+  @media (min-width: 500px) {
+    display: block;
+  }
   ul {
     display: flex;
     font-size: 1rem;
     justify-content: space-evenly;
     padding: 0;
+    margin: 0;
   }
   ul li {
     list-style-type: none;
