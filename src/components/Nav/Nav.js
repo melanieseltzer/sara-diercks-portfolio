@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { Slider } from 'react-burgers';
 
 // Pull in nav items for render
 import { COLORS, pages } from '../../constants';
@@ -30,10 +31,20 @@ const navItem = name => (
 );
 
 export default () => (
-  <Nav>
-    <ul>{pages.map(page => navItem(page))}</ul>
-  </Nav>
+  <>
+    <Hamburger />
+    <Nav>
+      <ul>{pages.map(page => navItem(page))}</ul>
+    </Nav>
+  </>
 );
+
+const Hamburger = styled(Slider)`
+  padding: 0;
+  @media (min-width: 500px) {
+    display: none !important;
+  }
+`;
 
 const Nav = styled.nav`
   display: none;
