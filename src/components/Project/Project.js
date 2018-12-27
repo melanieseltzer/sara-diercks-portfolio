@@ -34,6 +34,7 @@ export default ({ project }: Props) => (
               : project.externalLinkUrl
           }
           target="_blank"
+          className="project-link"
         >
           <span>
             {project.externalLinkName
@@ -71,7 +72,7 @@ const Project = styled.div`
 const Image = styled.img`
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   width: 100%;
 `;
@@ -104,7 +105,7 @@ const Link = styled.a`
   color: inherit;
   text-decoration: none;
   span:not(.tag) {
-    color: ${COLORS.primary.light};
+    color: ${COLORS.primary.dark};
     &:hover {
       text-decoration: underline;
     }

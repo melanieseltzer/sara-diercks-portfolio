@@ -143,6 +143,6 @@ const StyledLink = styled(AnchorLink)`
   color: inherit;
   text-decoration: none;
   &:hover {
-    border-bottom: 3px solid ${COLORS.primary.light};
+    border-bottom: 3px solid ${COLORS.primary.dark};
   }
 `;
