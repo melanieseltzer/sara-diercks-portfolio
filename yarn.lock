@@ -4438,6 +4438,11 @@ react-anchor-link-smooth-scroll@^1.0.11:
   resolved "https://registry.yarnpkg.com/react-anchor-link-smooth-scroll/-/react-anchor-link-smooth-scroll-1.0.11.tgz#e53f55b89382df0d85470ebd20e6b349d62eb19d"
   integrity sha512-PaAFtqs00eXbbYPTaiG7sEL2EkVfs+PiarzMnMN66JQWamORiNOzyhumW2tImKeKFUZeFdifqz9iJy/2e4RLnw==
 
+react-animated-burgers@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/react-animated-burgers/-/react-animated-burgers-1.2.5.tgz#76d30de3b1eee7e84643a9c5ef8bb8faf69f5863"
+  integrity sha512-tIXYSxufbvc/yVoEzu1GQQ2DR3rONYEwrA4nl9JsqNxy++304CGWYCL2iHCfT3BisZCBUcbv6sc57NieIRWpGA==
+
 react-apollo@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-2.3.3.tgz#a4609f3112d4351a1e363090d8cd363b04e2cc91"
