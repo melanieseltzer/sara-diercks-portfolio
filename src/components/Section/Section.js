@@ -24,11 +24,8 @@ const Section = styled.section`
   background: ${COLORS.gray.light};
   color: ${COLORS.black.light};
   height: auto;
-  padding: 60px 0 25px 0;
+  padding: 100px 0 100px 0;
   text-align: left;
-  &:last-child {
-    padding-bottom: 50px;
-  }
 `;
 
 const Container = styled.div`
