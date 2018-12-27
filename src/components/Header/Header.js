@@ -25,6 +25,7 @@ const Header = styled.header`
   height: auto;
   justify-content: space-between;
   margin: 0 auto;
+  min-height: 70px;
   padding: 1rem 20px;
   position: fixed;
   text-align: center;

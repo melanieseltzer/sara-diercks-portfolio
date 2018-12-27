@@ -1,8 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { HamburgerSpin } from 'react-animated-burgers';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -46,18 +45,12 @@ class Navigation extends Component<{}, State> {
     return (
       <>
         <Hamburger
-          type="button"
-          onClick={() => {
-            this.handleClick();
-          }}
-        >
-          <Icon
-            color={COLORS.black.dark}
-            size="3x"
-            // Switch between icons depending on click state
-            icon={active ? faTimes : faBars}
-          />
-        </Hamburger>
+          isActive={active}
+          toggleButton={this.handleClick}
+          buttonColor={COLORS.secondary.dark}
+          barColor="white"
+          buttonWidth={25}
+        />
         <Nav active={active}>
           <ul>
             {pages.map(page => (
@@ -78,9 +71,7 @@ class Navigation extends Component<{}, State> {
                   <StyledLink
                     // Since this is a one pager and the nav is always showing
                     // need to set the nav to close when a link is clicked
-                    onClick={() => {
-                      this.handleClick();
-                    }}
+                    onClick={this.handleClick}
                     target={page === 'Resume' ? '_blank' : undefined}
                   >
                     {page}
@@ -97,25 +88,17 @@ class Navigation extends Component<{}, State> {
 
 export default Navigation;
 
-const Hamburger = styled.button`
-  border: none;
-  padding: 0;
-  svg {
-    /* Set min-width so icons remain same size when switching between */
-    min-width: 30px;
+const Hamburger = styled(HamburgerSpin)`
+  div span,
+  div span::after,
+  div span::before {
+    height: 3px;
+  }
+  &:focus {
+    outline: 5px auto -webkit-focus-ring-color;
   }
   @media (min-width: 500px) {
     display: none !important;
-  }
-`;
-
-const Icon = styled(FontAwesomeIcon)`
-  padding: 0;
-  &:focus {
-    outline: inherit;
-  }
-  &:hover {
-    cursor: pointer;
   }
 `;
 
