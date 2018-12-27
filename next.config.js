@@ -1,4 +1,5 @@
-module.exports = {
-  distDir: 'build',
-  siteName: 'Portfolio of Sara Diercks'
-};
+const withCSS = require('@zeit/next-css');
+
+module.exports = withCSS({
+  distDir: 'build'
+});

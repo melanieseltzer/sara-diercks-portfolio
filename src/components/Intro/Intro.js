@@ -20,13 +20,13 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: auto;
+  height: calc(100vh - 100px);
   margin: 50px 20px;
   max-width: ${maxContainerWidth};
   text-align: left;
   @media (min-width: 768px) {
     margin: 0 20px;
-    height: calc(100vh - 58px);
+    height: calc(100vh);
   }
   @media (min-width: 1024px) {
     margin: 0 auto;

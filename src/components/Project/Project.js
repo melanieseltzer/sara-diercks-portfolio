@@ -112,6 +112,5 @@ const Link = styled.a`
 `;
 
 const FontAwesomeIconStyle = styled(FontAwesomeIcon)`
-  height: 1.05rem;
   margin-left: 10px;
 `;

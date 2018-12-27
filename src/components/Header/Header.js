@@ -21,12 +21,14 @@ const Header = styled.header`
   box-shadow: 0 1px 10px 0 rgba(51, 57, 132, 0.25);
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   height: auto;
   justify-content: space-between;
   margin: 0 auto;
   padding: 1rem 20px;
-  position: sticky;
+  position: fixed;
   text-align: center;
   top: 0;
+  width: 100%;
   z-index: 10;
 `;
