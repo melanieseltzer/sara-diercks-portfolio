@@ -20,16 +20,18 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 100px);
-  margin: 50px 20px;
+  height: auto;
+  padding: 100px 0;
+  margin: 58px 20px 0 20px;
   max-width: ${maxContainerWidth};
   text-align: left;
   @media (min-width: 768px) {
-    margin: 0 20px;
-    height: calc(100vh);
+    margin: 200px 20px;
   }
   @media (min-width: 1024px) {
     margin: 0 auto;
+    padding: 0;
+    height: calc(100vh);
   }
 `;
 
