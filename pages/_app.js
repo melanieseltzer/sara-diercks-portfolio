@@ -12,7 +12,7 @@ import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 
 import withApollo from '../backend/withApollo';
-import { COLORS } from '../src/constants';
+import { COLORS, sharedLinkStyles } from '../src/constants';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -66,22 +66,9 @@ const GlobalStyle = createGlobalStyle`
   }
   section a:not(.project-link),
   .footer-link {
+    color: inherit;
     text-decoration: none;
-    @media (min-width: 1025px) {
-      background-size: 100% 200%;
-      background-image: linear-gradient(
-        to top,
-        ${COLORS.primary.dark} 49%,
-        transparent 0%
-      );
-      padding: 3px;
-      transition: 0.2s ease;
-      z-index: 10;
-      &:hover {
-        background-position: 0 100%;
-        color: ${COLORS.white};
-      }
-    }
+    ${sharedLinkStyles}
   }
   p {
     font-size: 1.1rem;

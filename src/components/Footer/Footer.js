@@ -33,21 +33,21 @@ export default () => (
       </IconLink>
       <p>
         Designed &amp; Built by{' '}
-        <Link
+        <a
           href="https://melanieseltzer.io"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-link"
         >
           Melanie Seltzer
-        </Link>
+        </a>
       </p>
     </Container>
   </Footer>
 );
 
 const Footer = styled.footer`
-  background: ${COLORS.gray.light};
+  background: ${COLORS.gray.dark};
   color: ${COLORS.black.light};
   height: auto;
   padding: 50px 0;
@@ -72,10 +72,6 @@ const IconLink = styled.a`
       transform: scale(1.2);
     }
   }
-`;
-
-const Link = styled.a`
-  color: ${COLORS.primary.dark};
 `;
 
 const Icon = styled(FontAwesomeIcon)`

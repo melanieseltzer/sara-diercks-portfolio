@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { HamburgerSpin } from 'react-animated-burgers';
 import Link from 'next/link';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // Pull in nav items for render
 import { COLORS, pages } from '../../constants';
@@ -68,14 +68,21 @@ class Navigation extends Component<{}, State> {
                     to throw an error due to the `noHref` rule. The rule has been disabled
                     temporarily until a solution is found
                     ref: https://github.com/zeit/next.js/issues/5533 */}
-                  <StyledLink
-                    // Since this is a one pager and the nav is always showing
-                    // need to set the nav to close when a link is clicked
-                    onClick={this.handleClick}
-                    target={page === 'Resume' ? '_blank' : undefined}
-                  >
-                    {page}
-                  </StyledLink>
+
+                  {page === 'Resume' ? (
+                    // Resume doesn't have a hash for the anchor, so render it as a
+                    // regular link instead
+                    <StyledLink target="_blank">{page}</StyledLink>
+                  ) : (
+                    // AnchorLink is rendered only for links that have a hash
+                    <StyledAnchorLink
+                      // Mobile: since this is a one pager and the header is always showing
+                      // need to set the nav to close when a link is clicked
+                      onClick={this.handleClick}
+                    >
+                      {page}
+                    </StyledAnchorLink>
+                  )}
                 </Link>
               </li>
             ))}
@@ -139,10 +146,18 @@ const Nav = styled.nav`
   }
 `;
 
-const StyledLink = styled(AnchorLink)`
+const sharedLinkStyle = css`
   color: inherit;
   text-decoration: none;
   &:hover {
     border-bottom: 3px solid ${COLORS.primary.dark};
   }
+`;
+
+const StyledAnchorLink = styled(AnchorLink)`
+  ${sharedLinkStyle}
+`;
+
+const StyledLink = styled.a`
+  ${sharedLinkStyle}
 `;

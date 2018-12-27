@@ -21,7 +21,7 @@ export default ({ title, children }: Props) => (
 );
 
 const Section = styled.section`
-  background: ${COLORS.white};
+  background: ${COLORS.gray.light};
   color: ${COLORS.black.light};
   height: auto;
   padding: 100px 0 100px 0;
