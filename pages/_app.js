@@ -4,6 +4,10 @@ import { ApolloProvider } from 'react-apollo';
 import App, { Container } from 'next/app';
 import { createGlobalStyle } from 'styled-components';
 
+// To not have oversized icons on page refresh, have to load the css
+// ref: https://github.com/FortAwesome/react-fontawesome/issues/134
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 

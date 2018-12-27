@@ -15,22 +15,20 @@ export default () => (
 );
 
 const Header = styled.header`
+  align-items: center;
   background: ${COLORS.white};
   color: ${COLORS.black.light};
-  box-shadow: 0 1px 10px 0 rgba(42, 49, 141, 0.25);
+  box-shadow: 0 1px 10px 0 rgba(51, 57, 132, 0.25);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   height: auto;
+  justify-content: space-between;
   margin: 0 auto;
-  padding: 10px 20px;
-  position: sticky;
+  padding: 1rem 20px;
+  position: fixed;
   text-align: center;
   top: 0;
+  width: 100%;
   z-index: 10;
-  @media (min-width: 414px) {
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
 `;

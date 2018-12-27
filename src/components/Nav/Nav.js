@@ -1,51 +1,135 @@
 // @flow
-import React from 'react';
+import React, { Component } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 // Pull in nav items for render
 import { COLORS, pages } from '../../constants';
 
-// Render a single nav item in the UI
-// NOTE: The Next.js Link API forces you to add an <a> inside <Link>
-// which then gets its href passed down. This triggers `eslint-plugin-jsx-a11y`
-// to throw an error due to the `noHref` rule. The rule has been disabled temporarily
-// until a solution is found (issue: https://github.com/zeit/next.js/issues/5533)
-const navItem = name => (
-  <li key={name}>
-    <Link
-      href={
-        name === 'Resume'
-          ? `/static/Diercks_Sara_Resume102818.pdf`
-          : `#${name.toLowerCase()}`
-      }
-      passHref
-    >
-      {/* Add a target blank only if the link is the resume */}
-      <StyledLink target={name === 'Resume' ? '_blank' : undefined}>
-        {name}
-      </StyledLink>
-    </Link>
-  </li>
-);
+type State = {
+  active: boolean
+};
 
-export default () => (
-  <Nav>
-    <ul>{pages.map(page => navItem(page))}</ul>
-  </Nav>
-);
+class Navigation extends Component<{}, State> {
+  state = {
+    active: false
+  };
+
+  handleClick() {
+    const { active } = this.state;
+    this.setState({ active: !active });
+  }
+
+  render() {
+    const { active } = this.state;
+    return (
+      <>
+        <Hamburger
+          type="button"
+          onClick={() => {
+            this.handleClick();
+          }}
+        >
+          <Icon
+            color={COLORS.black.dark}
+            size="3x"
+            // Switch between icons depending on click state
+            icon={active ? faTimes : faBars}
+          />
+        </Hamburger>
+        <Nav active={active}>
+          <ul>
+            {pages.map(page => (
+              <li key={page}>
+                <Link
+                  href={
+                    page === 'Resume'
+                      ? `/static/Diercks_Sara_Resume102818.pdf`
+                      : `#${page.toLowerCase()}`
+                  }
+                  passHref
+                >
+                  {/* NOTE: The Next.js Link API forces you to add an <a> inside <Link>
+                    which gets its href passed down. This triggers `eslint-plugin-jsx-a11y`
+                    to throw an error due to the `noHref` rule. The rule has been disabled
+                    temporarily until a solution is found
+                    ref: https://github.com/zeit/next.js/issues/5533 */}
+                  <StyledLink
+                    // Since this is a one pager and the nav is always showing
+                    // need to set the nav to close when a link is clicked
+                    onClick={() => {
+                      this.handleClick();
+                    }}
+                    target={page === 'Resume' ? '_blank' : undefined}
+                  >
+                    {page}
+                  </StyledLink>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Nav>
+      </>
+    );
+  }
+}
+
+export default Navigation;
+
+const Hamburger = styled.button`
+  border: none;
+  padding: 0;
+  svg {
+    /* Set min-width so icons remain same size when switching between */
+    min-width: 30px;
+  }
+  @media (min-width: 500px) {
+    display: none !important;
+  }
+`;
+
+const Icon = styled(FontAwesomeIcon)`
+  padding: 0;
+  &:focus {
+    outline: inherit;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
 const Nav = styled.nav`
+  margin-top: 20px;
+  width: 100%;
+  @media (max-width: 499px) {
+    display: ${props => (props.active ? 'flex' : 'none')};
+    height: calc(100vh - 85px);
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: 500px) {
+    display: block;
+    margin: 0;
+    width: auto;
+  }
   ul {
-    display: flex;
-    font-size: 1rem;
+    font-size: 2rem;
     justify-content: space-evenly;
     padding: 0;
+    margin: 0;
+    @media (min-width: 500px) {
+      display: flex;
+      font-size: 1rem;
+    }
   }
   ul li {
     list-style-type: none;
-    @media (min-width: 414px) {
+    padding-bottom: 3rem;
+    @media (min-width: 500px) {
       margin-left: 1.5rem;
+      padding: 0;
       &:first-child {
         margin-left: 0;
       }

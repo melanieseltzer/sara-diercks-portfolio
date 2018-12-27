@@ -1,7 +1,6 @@
 // @flow
 import React, { type Node, Fragment } from 'react';
 import Head from 'next/head';
-import { siteName } from '../../next.config';
 
 type Props = {
   children: Node,
@@ -17,9 +16,7 @@ export default ({
   <Fragment>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>
-        {pageTitle} | {siteName}
-      </title>
+      <title>{pageTitle} | Portfolio of Sara Diercks</title>
       <meta name="description" content={metaDescription} />
       <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,400"

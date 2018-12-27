@@ -21,15 +21,17 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   height: auto;
-  margin: 50px 20px;
+  padding: 100px 0;
+  margin: 65px 20px 0 20px;
   max-width: ${maxContainerWidth};
   text-align: left;
   @media (min-width: 768px) {
-    margin: 0 20px;
-    height: calc(100vh - 50px);
+    margin: 200px 20px;
   }
   @media (min-width: 1024px) {
     margin: 0 auto;
+    padding: 0;
+    height: calc(100vh);
   }
 `;
 
