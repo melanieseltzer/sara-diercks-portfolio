@@ -34,7 +34,7 @@ class Navigation extends Component<{}, State> {
         >
           <Icon
             color={COLORS.black.dark}
-            size="2x"
+            size="3x"
             // Switch between icons depending on click state
             icon={active ? faTimes : faBars}
           />
@@ -105,7 +105,7 @@ const Nav = styled.nav`
   width: 100%;
   @media (max-width: 499px) {
     display: ${props => (props.active ? 'flex' : 'none')};
-    height: calc(100vh - 78px);
+    height: calc(100vh - 85px);
     justify-content: center;
     align-items: center;
   }

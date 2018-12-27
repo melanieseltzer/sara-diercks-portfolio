@@ -22,7 +22,7 @@ const Section = styled.section`
   justify-content: center;
   height: auto;
   padding: 100px 0;
-  margin: 58px 20px 0 20px;
+  margin: 65px 20px 0 20px;
   max-width: ${maxContainerWidth};
   text-align: left;
   @media (min-width: 768px) {
