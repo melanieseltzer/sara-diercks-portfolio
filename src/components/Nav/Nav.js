@@ -1,9 +1,10 @@
 // @flow
 import React, { Component } from 'react';
-import Link from 'next/link';
-import styled from 'styled-components';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
+import styled from 'styled-components';
 
 // Pull in nav items for render
 import { COLORS, pages } from '../../constants';
@@ -13,14 +14,32 @@ type State = {
 };
 
 class Navigation extends Component<{}, State> {
+  // Initial state of hamburger is false (closed)
   state = {
     active: false
   };
 
-  handleClick() {
+  componentDidMount = () => {
+    // Do a check on mount for screen resize, if going from mobile view (with hamburger)
+    // to tablet/desktop view (no hamburger), then reset active state with handleResize
+    this.handleResize = this.handleResize.bind(this);
+    window.addEventListener('resize', this.handleResize);
+  };
+
+  handleResize = () => {
+    if (window.innerWidth >= 500) {
+      this.setState({ active: false });
+    }
+  };
+
+  handleClick = () => {
     const { active } = this.state;
-    this.setState({ active: !active });
-  }
+
+    // Only run set state if browser is small enough to have the hamburger
+    if (window.innerWidth < 500) {
+      this.setState({ active: !active });
+    }
+  };
 
   render() {
     const { active } = this.state;
@@ -137,7 +156,7 @@ const Nav = styled.nav`
   }
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(AnchorLink)`
   color: inherit;
   text-decoration: none;
   &:hover {
