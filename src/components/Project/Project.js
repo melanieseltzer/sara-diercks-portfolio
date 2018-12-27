@@ -81,6 +81,7 @@ const ProjectDetails = styled.div`
 `;
 
 const H4 = styled.h4`
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.8rem;
   margin-bottom: 0;
@@ -95,12 +96,11 @@ const Tag = styled.span`
 `;
 
 const Paragraph = styled.p`
-  font-weight: 300;
-  line-height: 1.5rem;
   margin: 10px 0 40px 0;
 `;
 
 const Link = styled.a`
+  font-size: 1.1rem;
   color: inherit;
   text-decoration: none;
   span:not(.tag) {

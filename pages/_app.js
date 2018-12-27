@@ -64,4 +64,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     width: 100vw;
   }
+  p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 2rem;
+  }
 `;

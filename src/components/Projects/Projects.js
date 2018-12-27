@@ -36,7 +36,7 @@ export default () => (
         {({ loading, error, data }) => {
           // Handle loading/error state
           if (loading) return <div>Loading...</div>;
-          if (error) return <div>Cannot get projects :(</div>;
+          if (error) return <div>Error fetching projects :(</div>;
 
           // Handle no projects at all
           if (data.projects.length === 0)
