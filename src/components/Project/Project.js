@@ -7,7 +7,7 @@ import {
   faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons';
 
-import { COLORS } from '../../constants';
+import { COLORS, sharedLinkStyles } from '../../constants';
 
 type Props = {
   project: Object
@@ -40,10 +40,10 @@ export default ({ project }: Props) => (
             {project.externalLinkName
               ? project.externalLinkName
               : 'View Project'}
-            <FontAwesomeIconStyle
-              icon={project.externalLinkName ? faExternalLinkAlt : faFilePdf}
-            />
           </span>
+          <FontAwesomeIconStyle
+            icon={project.externalLinkName ? faExternalLinkAlt : faFilePdf}
+          />
         </Link>
       </ProjectDetails>
     </Project>
@@ -57,14 +57,14 @@ const Project = styled.div`
   height: auto;
   margin-bottom: 50px;
   width: 100%;
-  transition: 0.4s ease;
+  transition: 0.2s ease;
   z-index: 1;
   @media (min-width: 768px) {
     width: 45%;
   }
   @media (min-width: 1024px) {
     &:hover {
-      transform: scale(1.04);
+      transform: scale(1.02);
     }
   }
 `;
@@ -101,17 +101,15 @@ const Paragraph = styled.p`
 `;
 
 const Link = styled.a`
-  font-size: 1.1rem;
   color: inherit;
+  font-size: 1.1rem;
   text-decoration: none;
   span:not(.tag) {
-    color: ${COLORS.primary.dark};
-    &:hover {
-      text-decoration: underline;
-    }
+    ${sharedLinkStyles}
   }
 `;
 
 const FontAwesomeIconStyle = styled(FontAwesomeIcon)`
+  color: ${COLORS.primary.dark};
   margin-left: 10px;
 `;
