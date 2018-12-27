@@ -17,10 +17,10 @@ const H3 = styled.h3`
   color: inherit;
   font-size: 1.6rem;
   font-weight: 400;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   position: relative;
   &:after {
-    border-bottom: 5px solid ${COLORS.secondary.dark};
+    border-bottom: 3px solid ${COLORS.secondary.dark};
     content: '';
     position: absolute;
     width: 50%;

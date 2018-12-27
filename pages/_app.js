@@ -64,6 +64,25 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     width: 100vw;
   }
+  section a:not(.project-link),
+  .footer-link {
+    text-decoration: none;
+    @media (min-width: 1025px) {
+      background-size: 100% 200%;
+      background-image: linear-gradient(
+        to top,
+        ${COLORS.primary.dark} 49%,
+        transparent 0%
+      );
+      padding: 3px;
+      transition: 0.2s ease;
+      z-index: 10;
+      &:hover {
+        background-position: 0 100%;
+        color: ${COLORS.white};
+      }
+    }
+  }
   p {
     font-size: 1.1rem;
     font-weight: 300;

@@ -34,10 +34,10 @@ const Logo = styled.h1`
 `;
 
 const Border = styled.span`
-  background: ${COLORS.primary.light};
+  background: ${COLORS.primary.dark};
   background: linear-gradient(
     to right,
-    ${COLORS.primary.light},
+    ${COLORS.primary.dark},
     ${COLORS.secondary.dark}
   );
   bottom: 0;
