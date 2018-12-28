@@ -17,11 +17,11 @@ export default () => (
   <Section title="About">
     <Query query={GET_ABOUT_ME}>
       {({ loading, error, data }) => {
-        const { about } = data.sections[0];
-
         // Handle loading/error state
         if (loading) return <div>Loading...</div>;
         if (error) return <div>Error loading About Me :(</div>;
+
+        const { about } = data.sections[0];
 
         // Handle no about
         if (data.sections.length === 0) {
