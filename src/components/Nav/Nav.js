@@ -18,12 +18,16 @@ class Navigation extends Component<{}, State> {
     active: false
   };
 
-  componentDidMount = () => {
+  componentDidMount() {
     // Do a check on mount for screen resize, if going from mobile view (with hamburger)
     // to tablet/desktop view (no hamburger), then reset active state with handleResize
-    this.handleResize = this.handleResize.bind(this);
     window.addEventListener('resize', this.handleResize);
-  };
+  }
+
+  componentWillUnmount() {
+    // Remove the listener on unmount
+    window.removeEventListener('resize', this.handleResize);
+  }
 
   handleResize = () => {
     if (window.innerWidth >= 500) {
