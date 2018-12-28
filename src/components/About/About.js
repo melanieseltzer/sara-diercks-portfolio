@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import { Query } from 'react-apollo';
+import Markdown from 'react-markdown';
 import { gql } from 'apollo-boost';
 
 import Section from '../Section';
@@ -28,7 +29,7 @@ export default () => (
           return <p>Nothing found.</p>;
         }
 
-        return <p>{about}</p>;
+        return <Markdown source={about} />;
       }}
     </Query>
   </Section>

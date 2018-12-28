@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import styled from 'styled-components';
+import Markdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFilePdf,
@@ -25,7 +26,7 @@ export default ({ project }: Props) => (
           {project.title}{' '}
           {project.finalProject && <Tag className="tag">Final Project</Tag>}
         </H4>
-        <Paragraph>{project.shortDescription}</Paragraph>
+        <Paragraph source={project.shortDescription} />
         <Link
           href={
             // If there's a PDF then that will be the link, otherwise there'll be an external link
@@ -53,7 +54,7 @@ export default ({ project }: Props) => (
 const Project = styled.div`
   background: ${COLORS.white};
   border-radius: 7px;
-  box-shadow: 0 8px 40px 0 rgba(51, 57, 132, 0.25);
+  box-shadow: 0 10px 40px 0 rgba(64, 67, 109, 0.25);
   height: auto;
   margin-bottom: 50px;
   width: 100%;
@@ -64,6 +65,8 @@ const Project = styled.div`
   }
   @media (min-width: 1024px) {
     &:hover {
+      position: relative;
+      box-shadow: 0 10px 40px 0 rgba(64, 67, 109, 0.35);
       transform: scale(1.02);
     }
   }
@@ -96,7 +99,7 @@ const Tag = styled.span`
   padding: 7px;
 `;
 
-const Paragraph = styled.p`
+const Paragraph = styled(Markdown)`
   margin: 10px 0 40px 0;
 `;
 
