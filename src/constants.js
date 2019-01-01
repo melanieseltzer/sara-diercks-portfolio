@@ -33,7 +33,7 @@ export const sharedLinkStyles = css`
   font-weight: 400;
   background-image: linear-gradient(
     180deg,
-    transparent 70%,
+    transparent 73%,
     ${COLORS.primary.light} 0
   );
 `;
