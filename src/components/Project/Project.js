@@ -9,6 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import { COLORS, sharedLinkStyles } from '../../constants';
+import { bytesToSize } from '../../utils';
 
 type Props = {
   project: Object
@@ -40,7 +41,7 @@ export default ({ project }: Props) => (
           <span>
             {project.externalLinkName
               ? project.externalLinkName
-              : 'View Project'}
+              : `View Project ${bytesToSize(project.projectPdf.size)}`}
           </span>
           <FontAwesomeIconStyle
             icon={project.externalLinkName ? faExternalLinkAlt : faFilePdf}
@@ -88,7 +89,7 @@ const H4 = styled.h4`
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.8rem;
-  margin-bottom: 0;
+  margin: 0;
 `;
 
 const Tag = styled.span`

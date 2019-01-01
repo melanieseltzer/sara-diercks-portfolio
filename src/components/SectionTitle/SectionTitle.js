@@ -15,7 +15,9 @@ export default Title;
 const H3 = styled.h3`
   display: inline-block;
   color: inherit;
+  font-family: 'Lora', serif;
   font-size: 1.6rem;
+  font-style: italic;
   font-weight: 400;
   padding-bottom: 10px;
   position: relative;

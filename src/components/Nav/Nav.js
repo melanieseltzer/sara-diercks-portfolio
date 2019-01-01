@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { HamburgerSpin } from 'react-animated-burgers';
 import Link from 'next/link';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 // Pull in nav items for render
-import { COLORS, pages } from '../../constants';
+import { COLORS, pages, StyledLinkHover } from '../../constants';
 
 type State = {
   active: boolean
@@ -138,9 +138,13 @@ const Nav = styled.nav`
     }
   }
   ul li {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 400;
     list-style-type: none;
     padding-bottom: 3rem;
     @media (min-width: 500px) {
+      font-size: 1.1rem;
       margin-left: 1.5rem;
       padding: 0;
       &:first-child {
@@ -150,18 +154,10 @@ const Nav = styled.nav`
   }
 `;
 
-const sharedLinkStyle = css`
-  color: inherit;
-  text-decoration: none;
-  &:hover {
-    border-bottom: 3px solid ${COLORS.primary.dark};
-  }
-`;
-
 const StyledAnchorLink = styled(AnchorLink)`
-  ${sharedLinkStyle}
+  ${StyledLinkHover}
 `;
 
 const StyledLink = styled.a`
-  ${sharedLinkStyle}
+  ${StyledLinkHover}
 `;

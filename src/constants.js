@@ -33,7 +33,15 @@ export const sharedLinkStyles = css`
   font-weight: 400;
   background-image: linear-gradient(
     180deg,
-    transparent 70%,
+    transparent 73%,
     ${COLORS.primary.light} 0
   );
+`;
+
+export const StyledLinkHover = css`
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    border-bottom: 3px solid ${COLORS.primary.dark};
+  }
 `;
