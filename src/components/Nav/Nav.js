@@ -105,9 +105,6 @@ const Hamburger = styled(HamburgerSpin)`
   div span::before {
     height: 3px;
   }
-  &:focus {
-    outline: 5px auto -webkit-focus-ring-color;
-  }
   @media (min-width: 500px) {
     display: none !important;
   }

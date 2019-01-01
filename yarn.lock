@@ -1583,13 +1583,13 @@ browserify-zlib@^0.2.0:
     pako "~1.0.5"
 
 browserslist@^4.1.0:
-  version "4.3.6"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.3.6.tgz#0f9d9081afc66b36f477c6bdf3813f784f42396a"
-  integrity sha512-kMGKs4BTzRWviZ8yru18xBpx+CyHG9eqgRbj9XbE3IMgtczf4aiA0Y1YCpVdvUieKGZ03kolSPXqTcscBCb9qw==
+  version "4.3.7"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.3.7.tgz#f1de479a6466ea47a0a26dcc725e7504817e624a"
+  integrity sha512-pWQv51Ynb0MNk9JGMCZ8VkM785/4MQNXiFYtPqI7EEP0TJO+/d/NqRVn1uiAN0DNbnlUSpL2sh16Kspasv3pUQ==
   dependencies:
-    caniuse-lite "^1.0.30000921"
-    electron-to-chromium "^1.3.92"
-    node-releases "^1.1.1"
+    caniuse-lite "^1.0.30000925"
+    electron-to-chromium "^1.3.96"
+    node-releases "^1.1.3"
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -1705,7 +1705,7 @@ callsites@^2.0.0:
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-2.0.0.tgz#06eb84f00eea413da86affefacbffb36093b3c50"
   integrity sha1-BuuE8A7qQT2oav/vrL/7Ngk7PFA=
 
-caniuse-lite@^1.0.30000921:
+caniuse-lite@^1.0.30000925:
   version "1.0.30000925"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000925.tgz#f1a3b9aae2a83071b1eccfa39959d72440409b08"
   integrity sha512-zcYupoUxtW46rOikuDF7vfL9N1Qe9ZuUBTz3n3q8fFsoJIs/h9UN6Vg/0QpjsmvImXw9mVc3g+ZBfqvUz/iALA==
@@ -2359,7 +2359,7 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-electron-to-chromium@^1.3.92:
+electron-to-chromium@^1.3.96:
   version "1.3.96"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.96.tgz#25770ec99b8b07706dedf3a5f43fa50cb54c4f9a"
   integrity sha512-ZUXBUyGLeoJxp4Nt6G/GjBRLnyz8IKQGexZ2ndWaoegThgMGFO1tdDYID5gBV32/1S83osjJHyfzvanE/8HY4Q==
@@ -4555,7 +4555,7 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-node-releases@^1.1.1:
+node-releases@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.3.tgz#aad9ce0dcb98129c753f772c0aa01360fb90fbd2"
   integrity sha512-6VrvH7z6jqqNFY200kdB6HdzkgM96Oaj9v3dqGfgp6mF+cHmU4wyQKZ2/WPDRVoR0Jz9KqbamaBN0ZhdUaysUQ==
@@ -5270,9 +5270,10 @@ react-anchor-link-smooth-scroll@^1.0.11:
   resolved "https://registry.yarnpkg.com/react-anchor-link-smooth-scroll/-/react-anchor-link-smooth-scroll-1.0.11.tgz#e53f55b89382df0d85470ebd20e6b349d62eb19d"
   integrity sha512-PaAFtqs00eXbbYPTaiG7sEL2EkVfs+PiarzMnMN66JQWamORiNOzyhumW2tImKeKFUZeFdifqz9iJy/2e4RLnw==
 
-react-animated-burgers@melanieseltzer/react-animated-burgers:
-  version "1.2.5"
-  resolved "https://codeload.github.com/melanieseltzer/react-animated-burgers/tar.gz/75030f1690bd513a8475508a2876475d63974ee3"
+react-animated-burgers@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/react-animated-burgers/-/react-animated-burgers-1.2.6.tgz#9a1333781301e7b4fbc3022b8144061a81d198ed"
+  integrity sha512-Djcy/ysbm8Wt3mYtpwUxn7q5AX1kAaihbbNdI4SsLg2cnStwPGlb6vhmcoL/waoUJmQBoE0TMdyaVxxEIKLn2A==
 
 react-apollo@^2.3.3:
   version "2.3.3"
