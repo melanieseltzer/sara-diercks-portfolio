@@ -9,7 +9,7 @@ import Section from '../Section';
 
 const GET_PROJECTS = gql`
   query {
-    projects(orderBy: createdAt_DESC, where: { status: PUBLISHED }) {
+    projects(orderBy: createdAt_ASC, where: { status: PUBLISHED }) {
       id
       title
       shortDescription
@@ -21,6 +21,7 @@ const GET_PROJECTS = gql`
       projectPdf {
         fileName
         url
+        size
       }
       finalProject
       externalLinkUrl
