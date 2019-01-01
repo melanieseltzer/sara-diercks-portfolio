@@ -14,6 +14,7 @@ export default () => (
         href="https://www.linkedin.com/in/sara-diercks-623857a7/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="LinkedIn"
       >
         <Icon size="2x" icon={faLinkedin} />
       </IconLink>
@@ -21,6 +22,7 @@ export default () => (
         href="https://github.com/saradiercks"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Github"
       >
         <Icon size="2x" icon={faGithub} />
       </IconLink>
@@ -28,6 +30,7 @@ export default () => (
         href="mailto:s.diercks31@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Email"
       >
         <Icon size="2x" icon={faEnvelope} />
       </IconLink>
