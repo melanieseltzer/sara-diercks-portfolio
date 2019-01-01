@@ -15,8 +15,9 @@ const GET_PROJECTS = gql`
       shortDescription
       status
       thumbnail {
-        fileName
-        url
+        handle
+        width
+        height
       }
       projectPdf {
         fileName
