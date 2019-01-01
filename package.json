@@ -10,7 +10,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint 'pages/**/*.js' 'src/**/*.js'",
-    "prettier": "prettier --write",
     "flow": "flow",
     "deploy": "now rm sara-diercks-portfolio --safe --yes ; now && now alias"
   },
@@ -22,7 +21,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "npm run prettier",
+      "prettier --write",
       "eslint --ignore-path .eslintignore",
       "git add"
     ]
