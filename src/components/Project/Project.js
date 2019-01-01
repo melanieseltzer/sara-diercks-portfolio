@@ -43,6 +43,7 @@ export default ({ project }: Props) => (
           }
           target="_blank"
           className="project-link"
+          rel="noopener noreferrer"
         >
           <span>
             {project.externalLinkName

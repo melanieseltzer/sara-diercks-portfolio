@@ -19,10 +19,6 @@ export default ({
       <title>{pageTitle} | Portfolio of Sara Diercks</title>
       <meta name="description" content={metaDescription} />
       <link rel="icon" type="image/x-icon" href="../static/favicon.png" />
-      <link
-        href="https://fonts.googleapis.com/css?family=Lora:400i|Roboto:300,400"
-        rel="stylesheet"
-      />
     </Head>
     <main>{children}</main>
   </Fragment>
