@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import React, { Component } from 'react';
 
 import Fonts from '../src/Fonts';
 import About from '../src/components/About';
@@ -10,7 +10,7 @@ import Projects from '../src/components/Projects';
 
 const pageName = 'Home';
 
-class Index extends React.Component {
+class Index extends Component<{}> {
   componentDidMount() {
     Fonts();
   }
