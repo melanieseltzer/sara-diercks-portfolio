@@ -19,6 +19,7 @@ const H3 = styled.h3`
   font-size: 1.6rem;
   font-style: italic;
   font-weight: 400;
+  margin-top: 0;
   padding-bottom: 10px;
   position: relative;
   &:after {

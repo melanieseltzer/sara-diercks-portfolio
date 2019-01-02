@@ -103,8 +103,11 @@ const Tag = styled.span`
   background: ${COLORS.secondary.light};
   border-radius: 14px;
   font-size: 0.8rem;
-  margin-left: 10px;
   padding: 7px;
+  white-space: nowrap;
+  @media (min-width: 425px) {
+    margin-left: 10px;
+  }
 `;
 
 const Paragraph = styled(Markdown)`

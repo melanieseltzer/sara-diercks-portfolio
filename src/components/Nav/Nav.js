@@ -83,6 +83,7 @@ class Navigation extends Component<{}, State> {
                       // Mobile: since this is a one pager and the header is always showing
                       // need to set the nav to close when a link is clicked
                       onClick={this.handleClick}
+                      offset="70"
                     >
                       {page}
                     </StyledAnchorLink>

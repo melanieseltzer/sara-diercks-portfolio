@@ -24,8 +24,11 @@ const Section = styled.section`
   background: ${COLORS.gray.light};
   color: ${COLORS.black.light};
   height: auto;
-  padding: 100px 0 100px 0;
+  padding: 50px 0 50px 0;
   text-align: left;
+  @media (min-width: 1024px) {
+    padding: 100px 0 100px 0;
+  }
 `;
 
 const Container = styled.div`
