@@ -7,8 +7,8 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { COLORS, maxContainerWidth } from '../../constants';
 
-export default () => (
-  <Footer>
+const Footer = () => (
+  <FooterStyled>
     <Container>
       <IconLink
         href="https://www.linkedin.com/in/sara-diercks-623857a7/"
@@ -46,10 +46,12 @@ export default () => (
         </a>
       </p>
     </Container>
-  </Footer>
+  </FooterStyled>
 );
 
-const Footer = styled.footer`
+export default Footer;
+
+const FooterStyled = styled.footer`
   background: ${COLORS.gray.dark};
   color: ${COLORS.black.light};
   height: auto;

@@ -4,16 +4,18 @@ import styled from 'styled-components';
 
 import { COLORS } from '../../constants';
 
-export default () => (
-  <Logo>
+const Logo = () => (
+  <LogoStyled>
     <a href="/">
       Sara Diercks
       <Border />
     </a>
-  </Logo>
+  </LogoStyled>
 );
 
-const Logo = styled.h1`
+export default Logo;
+
+const LogoStyled = styled.h1`
   font-family: 'Lora', serif;
   font-style: italic;
   font-size: 1.4rem;

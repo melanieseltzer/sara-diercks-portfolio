@@ -3,7 +3,7 @@ import React from 'react';
 
 import Section from '../Section';
 
-export default () => (
+const Contact = () => (
   <Section title="Contact">
     <p>
       I'm currently seeking employment opportunities. Please{' '}
@@ -11,3 +11,5 @@ export default () => (
     </p>
   </Section>
 );
+
+export default Contact;

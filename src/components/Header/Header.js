@@ -7,14 +7,16 @@ import Nav from '../Nav';
 
 import { COLORS } from '../../constants';
 
-export default () => (
-  <Header>
+const Header = () => (
+  <HeaderStyled>
     <Logo />
     <Nav />
-  </Header>
+  </HeaderStyled>
 );
 
-const Header = styled.header`
+export default Header;
+
+const HeaderStyled = styled.header`
   align-items: center;
   background: ${COLORS.white};
   color: ${COLORS.black.light};

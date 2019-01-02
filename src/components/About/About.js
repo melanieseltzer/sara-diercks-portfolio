@@ -14,7 +14,7 @@ const GET_ABOUT_ME = gql`
   }
 `;
 
-export default () => (
+const About = () => (
   <Section title="About">
     <Query query={GET_ABOUT_ME}>
       {({ loading, error, data }) => {
@@ -34,3 +34,5 @@ export default () => (
     </Query>
   </Section>
 );
+
+export default About;
