@@ -8,7 +8,10 @@ import Page from '../src/components/Page';
 import Projects from '../src/components/Projects';
 
 const Index = () => (
-  <Page pageTitle="Home" metaDescription="Test">
+  <Page
+    pageTitle="Home"
+    metaDescription="Showcasing projects from UCLA Extension's GIS and Geospatial Technology certificate program."
+  >
     <Intro />
     <Projects />
     <About />
