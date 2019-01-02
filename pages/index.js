@@ -9,7 +9,7 @@ import Projects from '../src/components/Projects';
 
 const pageName = 'Home';
 
-export default () => (
+const Index = () => (
   <Page pageTitle={pageName} metaDescription="Test">
     <Intro />
     <Projects />
@@ -17,3 +17,5 @@ export default () => (
     <Contact />
   </Page>
 );
+
+export default Index;

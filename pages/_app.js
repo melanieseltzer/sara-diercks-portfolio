@@ -11,6 +11,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 
+import LoadFonts from '../src/fonts';
 import withApollo from '../backend/withApollo';
 import { COLORS, sharedLinkStyles } from '../src/constants';
 
@@ -23,6 +24,10 @@ class MyApp extends App {
     }
 
     return { pageProps };
+  }
+
+  componentDidMount() {
+    LoadFonts();
   }
 
   render() {

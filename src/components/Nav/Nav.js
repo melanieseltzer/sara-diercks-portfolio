@@ -100,13 +100,14 @@ class Navigation extends Component<{}, State> {
 export default Navigation;
 
 const Hamburger = styled(HamburgerSpin)`
+  height: 40px;
+  div {
+    height: 20px;
+  }
   div span,
   div span::after,
   div span::before {
     height: 3px;
-  }
-  &:focus {
-    outline: 5px auto -webkit-focus-ring-color;
   }
   @media (min-width: 500px) {
     display: none !important;

@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import GraphImg from 'graphcms-image';
 import styled from 'styled-components';
 import Markdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +21,12 @@ export default ({ project }: Props) => (
     <Project>
       {/* Project doesn't have to have a thumbnail */}
       {project.thumbnail && (
-        <Image src={project.thumbnail.url} alt={project.title} />
+        <Image
+          image={project.thumbnail}
+          alt={project.title}
+          maxWidth={730}
+          withWebp
+        />
       )}
       <ProjectDetails>
         <H4>
@@ -37,6 +43,7 @@ export default ({ project }: Props) => (
           }
           target="_blank"
           className="project-link"
+          rel="noopener noreferrer"
         >
           <span>
             {project.externalLinkName
@@ -73,7 +80,7 @@ const Project = styled.div`
   }
 `;
 
-const Image = styled.img`
+const Image = styled(GraphImg)`
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   height: 250px;
