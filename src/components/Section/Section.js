@@ -1,6 +1,8 @@
 // @flow
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import SectionTitle from '../SectionTitle';
 
@@ -11,16 +13,29 @@ type Props = {
   children: Node
 };
 
-export default ({ title, children }: Props) => (
-  <Section id={title.toLowerCase()}>
-    <Container>
-      <SectionTitle title={title} />
-      {children}
-    </Container>
-  </Section>
-);
+class Section extends Component<Props> {
+  componentDidMount() {
+    AOS.init({
+      duration: 1000
+    });
+  }
 
-const Section = styled.section`
+  render() {
+    const { title, children } = this.props;
+    return (
+      <SectionStyled id={title.toLowerCase()}>
+        <Container data-aos="fade-up">
+          <SectionTitle title={title} />
+          {children}
+        </Container>
+      </SectionStyled>
+    );
+  }
+}
+
+export default Section;
+
+const SectionStyled = styled.section`
   background: ${COLORS.gray.light};
   color: ${COLORS.black.light};
   height: auto;
