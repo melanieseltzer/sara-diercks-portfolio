@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { COLORS, maxContainerWidth } from '../../constants';
 
-export default () => (
+const Intro = () => (
   <Section>
     <H2>
       Hi! I'm Sara. I'm a <Mark>GIS Technician</Mark> living in Los Angeles, CA.
@@ -15,6 +15,8 @@ export default () => (
     </Byline>
   </Section>
 );
+
+export default Intro;
 
 const Section = styled.section`
   display: flex;

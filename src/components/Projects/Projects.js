@@ -31,9 +31,9 @@ const GET_PROJECTS = gql`
   }
 `;
 
-export default () => (
+const Projects = () => (
   <Section title="Projects">
-    <ProjectsWrapper>
+    <ProjectsStyled>
       <Query query={GET_PROJECTS}>
         {({ loading, error, data }) => {
           // Handle loading/error state
@@ -50,11 +50,13 @@ export default () => (
           ));
         }}
       </Query>
-    </ProjectsWrapper>
+    </ProjectsStyled>
   </Section>
 );
 
-const ProjectsWrapper = styled.div`
+export default Projects;
+
+const ProjectsStyled = styled.div`
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;

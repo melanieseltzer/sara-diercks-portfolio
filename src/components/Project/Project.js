@@ -16,9 +16,9 @@ type Props = {
   project: Object
 };
 
-export default ({ project }: Props) => (
+const Project = ({ project }: Props) => (
   <>
-    <Project>
+    <ProjectStyled>
       {/* Project doesn't have to have a thumbnail */}
       {project.thumbnail && (
         <Image
@@ -55,11 +55,13 @@ export default ({ project }: Props) => (
           />
         </Link>
       </ProjectDetails>
-    </Project>
+    </ProjectStyled>
   </>
 );
 
-const Project = styled.div`
+export default Project;
+
+const ProjectStyled = styled.div`
   background: ${COLORS.white};
   border-radius: 7px;
   box-shadow: 0 10px 40px 0 rgba(64, 67, 109, 0.25);

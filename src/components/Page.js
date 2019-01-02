@@ -8,7 +8,7 @@ type Props = {
   metaDescription: string
 };
 
-export default ({
+const Page = ({
   children,
   pageTitle = 'Default title',
   metaDescription = 'Default description'
@@ -23,3 +23,5 @@ export default ({
     <main>{children}</main>
   </Fragment>
 );
+
+export default Page;
