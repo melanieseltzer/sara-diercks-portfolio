@@ -71,7 +71,7 @@ const Project = styled.div`
   @media (min-width: 768px) {
     width: 45%;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     &:hover {
       position: relative;
       box-shadow: 0 10px 40px 0 rgba(64, 67, 109, 0.35);

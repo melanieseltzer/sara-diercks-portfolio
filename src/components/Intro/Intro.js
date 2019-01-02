@@ -26,12 +26,13 @@ const Section = styled.section`
   max-width: ${maxContainerWidth};
   text-align: left;
   @media (min-width: 768px) {
-    margin: 200px 20px;
+    margin: 0 20px;
+    padding: 200px 0;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     margin: 0 auto;
     padding: 0;
-    height: calc(100vh);
+    height: 100vh;
   }
 `;
 
