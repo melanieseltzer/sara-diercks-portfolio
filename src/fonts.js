@@ -1,6 +1,6 @@
 const FontFaceObserver = require('fontfaceobserver');
 
-const Fonts = () => {
+const LoadFonts = () => {
   const link = document.createElement('link');
   link.href =
     'https://fonts.googleapis.com/css?family=Lora:400i|Roboto:300,400';
@@ -11,10 +11,13 @@ const Fonts = () => {
   const Roboto = new FontFaceObserver('Roboto');
   const Lora = new FontFaceObserver('Lora');
 
-  Promise.all([Roboto.load(), Lora.load()]).then(() => {
-    document.documentElement.classList.add('Roboto');
-    document.documentElement.classList.add('Lora');
-  });
+  Promise.all([Roboto.load(), Lora.load()])
+    .then(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    })
+    .catch(() => {
+      document.documentElement.classList.add('fonts-failed');
+    });
 };
 
-export default Fonts;
+export default LoadFonts;

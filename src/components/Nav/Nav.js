@@ -100,6 +100,10 @@ class Navigation extends Component<{}, State> {
 export default Navigation;
 
 const Hamburger = styled(HamburgerSpin)`
+  height: 40px;
+  div {
+    height: 20px;
+  }
   div span,
   div span::after,
   div span::before {
