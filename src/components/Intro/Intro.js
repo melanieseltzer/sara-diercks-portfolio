@@ -1,20 +1,48 @@
 // @flow
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import { COLORS, maxContainerWidth } from '../../constants';
 
-const Intro = () => (
-  <Section>
-    <H2>
-      Hi! I'm Sara. I'm a <Mark>GIS Technician</Mark> living in Los Angeles, CA.
-    </H2>
-    <Byline>
-      I just completed my certificate in GIS and Geospatial Technology through
-      UCLA Extension. This portfolio showcases my current skills and projects.
-    </Byline>
-  </Section>
-);
+type State = {
+  height: number
+};
+
+class Intro extends Component<{}, State> {
+  state = { height: 0 };
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({ height: window.innerHeight });
+  };
+
+  render() {
+    const { height } = this.state;
+    const vh = height * 0.01;
+
+    return (
+      <Section height={vh}>
+        <H2>
+          Hi! I'm Sara. I'm a <Mark>GIS Technician</Mark> living in Los Angeles,
+          CA.
+        </H2>
+        <Byline>
+          I just completed my certificate in GIS and Geospatial Technology
+          through UCLA Extension. This portfolio showcases my current skills and
+          projects.
+        </Byline>
+      </Section>
+    );
+  }
+}
 
 export default Intro;
 
@@ -22,19 +50,12 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: auto;
-  padding: 100px 0;
-  margin: 65px 20px 0 20px;
+  height: ${props => `calc(${props.height}px * 100)`};
+  margin: 0 20px;
   max-width: ${maxContainerWidth};
   text-align: left;
-  @media (min-width: 768px) {
-    margin: 0 20px;
-    padding: 200px 0;
-  }
   @media (min-width: 1025px) {
     margin: 0 auto;
-    padding: 0;
-    height: 100vh;
   }
 `;
 
