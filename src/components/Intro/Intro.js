@@ -23,12 +23,11 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   height: auto;
-  padding: 100px 0;
-  margin: 65px 20px 0 20px;
+  padding: 160px 0 100px 0;
+  margin: 0 20px;
   max-width: ${maxContainerWidth};
   text-align: left;
   @media (min-width: 768px) {
-    margin: 0 20px;
     padding: 200px 0;
   }
   @media (min-width: 1025px) {
