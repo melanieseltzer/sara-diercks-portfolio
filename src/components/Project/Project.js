@@ -110,9 +110,6 @@ const Tag = styled.span`
   font-size: 0.8rem;
   padding: 7px;
   white-space: nowrap;
-  @media (min-width: 425px) {
-    margin-left: 10px;
-  }
 `;
 
 const Paragraph = styled(Markdown)`
