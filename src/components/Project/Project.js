@@ -71,7 +71,7 @@ const ProjectStyled = styled.div`
   transition: 0.2s ease;
   z-index: 1;
   @media (min-width: 768px) {
-    width: 45%;
+    width: 48%;
   }
   @media (min-width: 1025px) {
     &:hover {
@@ -79,6 +79,9 @@ const ProjectStyled = styled.div`
       box-shadow: 0 10px 40px 0 rgba(64, 67, 109, 0.35);
       transform: scale(1.02);
     }
+  }
+  @media (min-width: 1440px) {
+    width: 31%;
   }
 `;
 

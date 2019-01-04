@@ -22,7 +22,7 @@ class Section extends Component<Props> {
     const { title, children } = this.props;
     return (
       <SectionStyled id={title.toLowerCase()}>
-        <Container data-aos="fade-up">
+        <Container title={title} data-aos="fade-up">
           <SectionTitle title={title} />
           {children}
         </Container>
@@ -45,9 +45,8 @@ const SectionStyled = styled.section`
 `;
 
 const Container = styled.div`
-  max-width: ${maxContainerWidth};
-  margin: 0 20px;
-  @media (min-width: 1024px) {
-    margin: 0 auto;
-  }
+  max-width: ${props =>
+    props.title === 'Projects' ? '1440px' : `${maxContainerWidth}`};
+  margin: 0 auto;
+  padding: ${props => (props.title === 'Projects' ? '0 20px' : `0`)};
 `;
