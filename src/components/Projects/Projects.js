@@ -59,6 +59,6 @@ export default Projects;
 const ProjectsStyled = styled.div`
   display: flex;
   flex-flow: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 20px;
 `;

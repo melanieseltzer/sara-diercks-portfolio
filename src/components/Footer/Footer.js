@@ -16,7 +16,7 @@ const Footer = () => (
         rel="noopener noreferrer"
         aria-label="LinkedIn"
       >
-        <Icon size="2x" icon={faLinkedin} />
+        <Icon size="lg" icon={faLinkedin} />
       </IconLink>
       <IconLink
         href="https://github.com/saradiercks"
@@ -24,7 +24,7 @@ const Footer = () => (
         rel="noopener noreferrer"
         aria-label="Github"
       >
-        <Icon size="2x" icon={faGithub} />
+        <Icon size="lg" icon={faGithub} />
       </IconLink>
       <IconLink
         href="mailto:s.diercks31@gmail.com"
@@ -32,9 +32,9 @@ const Footer = () => (
         rel="noopener noreferrer"
         aria-label="Email"
       >
-        <Icon size="2x" icon={faEnvelope} />
+        <Icon size="lg" icon={faEnvelope} />
       </IconLink>
-      <p>
+      <Info>
         Designed &amp; Built by{' '}
         <a
           href="https://melanieseltzer.io"
@@ -44,7 +44,7 @@ const Footer = () => (
         >
           Melanie Seltzer
         </a>
-      </p>
+      </Info>
     </Container>
   </FooterStyled>
 );
@@ -55,7 +55,7 @@ const FooterStyled = styled.footer`
   background: ${COLORS.gray.dark};
   color: ${COLORS.black.light};
   height: auto;
-  padding: 50px 0;
+  padding: 20px 0 10px 0;
   text-align: left;
 `;
 
@@ -81,4 +81,11 @@ const IconLink = styled.a`
 
 const Icon = styled(FontAwesomeIcon)`
   color: ${COLORS.black.light};
+`;
+
+const Info = styled.p`
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 10px 0 0 0;
 `;

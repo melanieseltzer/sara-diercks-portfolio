@@ -31,11 +31,14 @@ export const maxContainerWidth = '900px';
 // Shared styles
 export const sharedLinkStyles = css`
   font-weight: 400;
-  background-image: linear-gradient(
+  background: linear-gradient(
     180deg,
-    transparent 73%,
+    transparent 78%,
     ${COLORS.primary.light} 0
   );
+  &:hover {
+    background: linear-gradient(180deg, transparent 0%, #f47f87 0);
+  }
 `;
 
 export const StyledLinkHover = css`

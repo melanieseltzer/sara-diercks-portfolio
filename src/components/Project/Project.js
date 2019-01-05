@@ -68,10 +68,10 @@ const ProjectStyled = styled.div`
   height: auto;
   margin-bottom: 50px;
   width: 100%;
-  transition: 0.2s ease;
+  transition: 0.3s ease;
   z-index: 1;
   @media (min-width: 768px) {
-    width: 48%;
+    width: 47%;
   }
   @media (min-width: 1025px) {
     &:hover {
@@ -81,7 +81,7 @@ const ProjectStyled = styled.div`
     }
   }
   @media (min-width: 1440px) {
-    width: 31%;
+    width: 30%;
   }
 `;
 

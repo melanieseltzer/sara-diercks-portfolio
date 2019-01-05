@@ -47,6 +47,11 @@ const SectionStyled = styled.section`
 const Container = styled.div`
   max-width: ${props =>
     props.title === 'Projects' ? '1440px' : `${maxContainerWidth}`};
-  margin: 0 auto;
-  padding: ${props => (props.title === 'Projects' ? '0 20px' : `0`)};
+  margin: 0 20px;
+  @media (min-width: 901px) {
+    margin: ${props => props.title !== 'Projects' && '0 auto'};
+  }
+  @media (min-width: 1480px) {
+    margin: ${props => props.title === 'Projects' && '0 auto'};
+  }
 `;
