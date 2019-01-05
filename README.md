@@ -2,7 +2,7 @@
 
 > 🌎 The GIS portfolio of Sara Diercks
 
-Live url: https://sara-diercks-portfolio.now.sh/
+Live url: https://saradiercks.com
 
 Showcasing projects from UCLA Extension's GIS and Geospatial Technology certificate program. It is currently under active development. Built using Next.js and powered by GraphCMS for the backend
 
