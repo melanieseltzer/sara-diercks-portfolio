@@ -1,5 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "name": "sara-diercks-portfolio",
-  "alias": ["saradiercks.com"]
+  "alias": ["saradiercks.com"],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ]
 }
