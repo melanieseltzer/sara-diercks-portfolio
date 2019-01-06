@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "eslint 'pages/**/*.js' 'src/**/*.js'",
     "flow": "flow",
-    "deploy": "now && now alias && now rm sara-diercks-portfolio --safe --yes"
+    "deploy": "now && now alias && now rm sara-diercks-portfolio --safe --yes",
+    "now-build": "next build"
   },
   "husky": {
     "hooks": {
