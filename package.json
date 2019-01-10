@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "eslint 'pages/**/*.js' 'src/**/*.js'",
     "flow": "flow",
-    "deploy": "now && now alias && now rm sara-diercks-portfolio --safe --yes",
+    "deploy": "now --force && now alias && now rm sara-diercks-portfolio --safe --yes",
     "now-build": "next build"
   },
   "husky": {
@@ -39,7 +39,7 @@
     "fontfaceobserver": "^2.1.0",
     "graphcms-image": "^1.1.0-beta4",
     "graphql": "^14.0.2",
-    "next": "^8.0.0-canary.2",
+    "next": "^8.0.0-canary.4",
     "next-compose-plugins": "^2.1.1",
     "next-with-apollo": "^3.3.1",
     "react": "^16.6.3",
@@ -61,7 +61,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.12.3",
-    "flow-bin": "^0.89.0",
+    "flow-bin": "^0.90.0",
     "husky": "^1.2.0",
     "lint-staged": "^8.1.0",
     "prettier": "^1.15.3"
