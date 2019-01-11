@@ -37,7 +37,7 @@ const Footer = () => (
       <Info>
         Designed &amp; Built by{' '}
         <a
-          href="https://melanieseltzer.io"
+          href="https://melanieseltzer.com"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-link"
