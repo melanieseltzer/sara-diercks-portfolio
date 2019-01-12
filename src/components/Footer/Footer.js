@@ -7,44 +7,39 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { COLORS, maxContainerWidth } from '../../constants';
 
+const socials = [
+  {
+    name: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/sara-diercks-623857a7/',
+    icon: faLinkedin
+  },
+  {
+    name: 'GitHub',
+    link: 'https://github.com/saradiercks',
+    icon: faGithub
+  },
+  {
+    name: 'Email',
+    link: 'mailto:s.diercks31@gmail.com',
+    icon: faEnvelope
+  }
+];
+
 const Footer = () => (
   <FooterStyled>
     <Container>
-      <IconLink
-        href="https://www.linkedin.com/in/sara-diercks-623857a7/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-      >
-        <Icon size="lg" icon={faLinkedin} />
-      </IconLink>
-      <IconLink
-        href="https://github.com/saradiercks"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Github"
-      >
-        <Icon size="lg" icon={faGithub} />
-      </IconLink>
-      <IconLink
-        href="mailto:s.diercks31@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Email"
-      >
-        <Icon size="lg" icon={faEnvelope} />
-      </IconLink>
-      <Info>
-        Designed &amp; Built by{' '}
-        <a
-          href="https://melanieseltzer.com"
+      {socials.map(social => (
+        <IconLink
+          key={social.name}
+          href={social.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="footer-link"
+          aria-label={social.name}
         >
-          Melanie Seltzer
-        </a>
-      </Info>
+          <Icon size="lg" icon={social.icon} />
+        </IconLink>
+      ))}
+      <Info>{`Copyright © ${new Date().getFullYear()} Sara Diercks`}</Info>
     </Container>
   </FooterStyled>
 );
@@ -70,8 +65,11 @@ const Container = styled.div`
 
 const IconLink = styled.a`
   display: inline-block;
-  margin-right: 20px;
+  margin-left: 20px;
   transition: 0.3s ease;
+  &:first-child {
+    margin-left: 0;
+  }
   @media (min-width: 1024px) {
     &:hover {
       transform: scale(1.2);
