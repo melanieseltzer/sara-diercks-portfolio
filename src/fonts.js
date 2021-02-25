@@ -1,7 +1,6 @@
-// @flow
 const FontFaceObserver = require('fontfaceobserver');
 
-const LoadFonts = (): void => {
+const LoadFonts = () => {
   const link = document.createElement('link');
   link.href =
     'https://fonts.googleapis.com/css?family=Lora:400i|Roboto:300,400';

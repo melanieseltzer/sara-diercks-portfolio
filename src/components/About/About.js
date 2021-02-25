@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 import { Query } from 'react-apollo';
 import Markdown from 'react-markdown';
@@ -8,7 +7,7 @@ import Section from '../Section';
 
 const GET_ABOUT_ME = gql`
   query {
-    sections(orderBy: createdAt_DESC, where: { status: PUBLISHED }) {
+    sections(orderBy: createdAt_DESC) {
       about
     }
   }

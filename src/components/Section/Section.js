@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import AOS from 'aos';
@@ -8,12 +7,7 @@ import SectionTitle from '../SectionTitle';
 
 import { COLORS, maxContainerWidth } from '../../constants';
 
-type Props = {
-  title: string,
-  children: Node
-};
-
-class Section extends Component<Props> {
+class Section extends Component {
   componentDidMount() {
     AOS.init({ duration: 1000, disable: 'mobile' });
   }

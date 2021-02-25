@@ -1,14 +1,9 @@
-// @flow
 import React from 'react';
 import styled from 'styled-components';
 
 import { COLORS } from '../../constants';
 
-type Props = {
-  title: String
-};
-
-const Title = ({ title }: Props) => <H3>{title}</H3>;
+const Title = ({ title }) => <H3>{title}</H3>;
 
 export default Title;
 

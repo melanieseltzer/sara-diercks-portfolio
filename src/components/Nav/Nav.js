@@ -1,18 +1,12 @@
-// @flow
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { HamburgerSpin } from 'react-animated-burgers';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-// Pull in nav items for render
 import { COLORS, pages, StyledLinkHover } from '../../constants';
 
-type State = {
-  active: boolean
-};
-
-class Navigation extends Component<{}, State> {
+class Navigation extends Component {
   // Initial state of hamburger is false (closed)
   state = {
     active: false

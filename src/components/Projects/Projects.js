@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
@@ -9,11 +8,10 @@ import Section from '../Section';
 
 const GET_PROJECTS = gql`
   query {
-    projects(orderBy: createdAt_ASC, where: { status: PUBLISHED }) {
+    projects(orderBy: createdAt_ASC) {
       id
       title
       shortDescription
-      status
       thumbnail {
         handle
         width
