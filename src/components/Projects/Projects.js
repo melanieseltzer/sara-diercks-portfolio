@@ -8,11 +8,10 @@ import Section from '../Section';
 
 const GET_PROJECTS = gql`
   query {
-    projects(orderBy: createdAt_ASC, where: { status: PUBLISHED }) {
+    projects(orderBy: createdAt_ASC) {
       id
       title
       shortDescription
-      status
       thumbnail {
         handle
         width
