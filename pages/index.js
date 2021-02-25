@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 
 import About from '../src/components/About';

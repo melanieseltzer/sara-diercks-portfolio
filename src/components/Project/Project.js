@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 import GraphImg from 'graphcms-image';
 import styled from 'styled-components';
@@ -12,11 +11,7 @@ import {
 import { COLORS, sharedLinkStyles } from '../../constants';
 import { bytesToSize } from '../../utils';
 
-type Props = {
-  project: Object
-};
-
-const Project = ({ project }: Props) => (
+const Project = ({ project }) => (
   <>
     <ProjectStyled>
       {/* Project doesn't have to have a thumbnail */}

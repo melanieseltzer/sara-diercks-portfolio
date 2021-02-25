@@ -1,4 +1,3 @@
-// @flow
 import withApollo from 'next-with-apollo';
 import ApolloClient, { InMemoryCache } from 'apollo-boost';
 import { GRAPHQL_URL } from './config';

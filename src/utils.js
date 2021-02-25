@@ -1,7 +1,6 @@
-// @flow
 // A small function to format bytes into appropriate sizes
 // returns a string with formatted size
-export function bytesToSize(bytes: number): string {
+export function bytesToSize(bytes) {
   const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
 
   // If no number was passed or it's 0 in then return empty
