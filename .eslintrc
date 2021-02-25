@@ -21,6 +21,7 @@
     "prettier"
   ],
   "rules": {
+    "react/prop-types": "warn",
     "prettier/prettier": [
       "error"
     ],
